@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:locale" content="en_US">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-Ubuntu搭建Hexo个人博客" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/05/27/Ubuntu%E6%90%AD%E5%BB%BAHexo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" class="article-date">
+  <time datetime="2020-05-27T15:53:18.000Z" itemprop="datePublished">2020-05-27</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/05/27/Ubuntu%E6%90%AD%E5%BB%BAHexo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">Ubuntu搭建Hexo个人博客</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ul>
+<li><p>安装git    </p>
+<p><code>sudo apt-get install git</code></p>
+</li>
+<li><p>Node.js官网(<a href="https://nodejs.org/)下载Linux" target="_blank" rel="noopener">https://nodejs.org/)下载Linux</a> Binaries (x64)node安装包</p>
+<p><code>node-v12.17.0-linux-x64.tar.xz</code></p>
+</li>
+<li><p>将安装包解压到指定目录</p>
+<p><code>sudo tar xJvf node-v12.17.0-linux-x64.tar.xz -C /usr/local/bin/</code></p>
+</li>
+<li><p>创建软链接</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /usr/<span class="built_in">local</span>/bin/</span><br><span class="line">sudo ln -s node-v12.17.0-linux-x64/bin/node ./node</span><br><span class="line">sudo ln -s node-v12.17.0-linux-x64/bin/npm ./npm</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>确保”/usr/local/bin/“在PATH路径中</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="variable">$PATH</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/home/eric/.pyenv/plugins/pyenv-virtualenv/shims:/home/eric/.pyenv/shims:/home/eric/.pyenv/bin:/home/eric/bin:/home/eric/.<span class="built_in">local</span>/bin:/usr/<span class="built_in">local</span>/sbin:**/usr/<span class="built_in">local</span>/bin**:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/<span class="built_in">local</span>/games:/snap/bin</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在用户目录中查看node及npm版本</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~</span><br><span class="line">node -v</span><br><span class="line">v12.17.0</span><br><span class="line">npm -v</span><br><span class="line">6.14.4</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>安装Hexo</p>
+<p><code>sudo npm install hexo-cli -g</code></p>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/05/27/Ubuntu%E6%90%AD%E5%BB%BAHexo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" data-id="ckapguxbd00003a7y42hl20ze" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Ubuntu环境安装vim支持系统剪贴板" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/05/27/Ubuntu%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85vim%E6%94%AF%E6%8C%81%E7%B3%BB%E7%BB%9F%E5%89%AA%E8%B4%B4%E6%9D%BF/" class="article-date">
+  <time datetime="2020-05-27T12:59:55.226Z" itemprop="datePublished">2020-05-27</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/05/27/Ubuntu%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85vim%E6%94%AF%E6%8C%81%E7%B3%BB%E7%BB%9F%E5%89%AA%E8%B4%B4%E6%9D%BF/">Ubuntu环境安装vim支持系统剪贴板</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ul>
+<li><p>Ubuntu自带vim不支持复制粘贴系统剪贴板，需要安装vim插件</p>
+<p><code>sudo apt-get install vim-gtk vim-scripts vim-gnome</code></p>
+</li>
+<li><p>查看安装好的vim插件</p>
+<p><code>dpkg -l vim*</code></p>
+<p><img src="../images/image-20200526205536519.png" alt="image-20200526205536519"></p>
+</li>
+<li><p>查看vim是否支持系统剪贴板</p>
+<p><code>vim --version | grep clipboard</code></p>
+<p><img src="../images/image-20200526205807433.png" alt="image-20200526205807433"></p>
+<blockquote>
+<p><strong>xterm_clipboard前面+表示支持系统剪贴板，-表示不支持</strong></p>
+</blockquote>
+</li>
+<li><p>在vim中使用系统剪贴板复制粘贴文字</p>
+<ul>
+<li>复制    <code>&quot;+y</code></li>
+<li>粘贴    <code>&quot;+p</code></li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/05/27/Ubuntu%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85vim%E6%94%AF%E6%8C%81%E7%B3%BB%E7%BB%9F%E5%89%AA%E8%B4%B4%E6%9D%BF/" data-id="ckapgtl9q00011w7y7xsl4j1l" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Ubuntu环境设置命令别名" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/05/27/Ubuntu%E7%8E%AF%E5%A2%83%E8%AE%BE%E7%BD%AE%E5%91%BD%E4%BB%A4%E5%88%AB%E5%90%8D/" class="article-date">
+  <time datetime="2020-05-27T12:59:55.226Z" itemprop="datePublished">2020-05-27</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/05/27/Ubuntu%E7%8E%AF%E5%A2%83%E8%AE%BE%E7%BD%AE%E5%91%BD%E4%BB%A4%E5%88%AB%E5%90%8D/">Ubuntu环境设置命令别名</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ol>
+<li>打开~/.bashrc文件</li>
+</ol>
+<p>​       <code>vi ~/.bashrc</code></p>
+<ol start="2">
+<li><p>在文件末尾增加以下内容</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># add custom alias</span></span><br><span class="line"><span class="built_in">alias</span> jc=<span class="string">'cd ~/PycharmProjects/Bitbucket/cisco-web-console/'</span></span><br><span class="line"><span class="built_in">alias</span> ji=<span class="string">'cd ~/PycharmProjects/Bitbucket/imeisearchtool/'</span></span><br><span class="line"><span class="built_in">alias</span> js=<span class="string">'cd ~/PycharmProjects/Bitbucket/ssh\ live/'</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>保存并退出</p>
+<p> <code>:wq</code></p>
+</li>
+<li><p>执行~/.bashrc文件使新配置生效</p>
+<p> <code>source ~/.bashrc</code></p>
+</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/05/27/Ubuntu%E7%8E%AF%E5%A2%83%E8%AE%BE%E7%BD%AE%E5%91%BD%E4%BB%A4%E5%88%AB%E5%90%8D/" data-id="ckapgtl9v00021w7ycvgsakk6" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Ubuntu解压压缩文件命令" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/05/27/Ubuntu%E8%A7%A3%E5%8E%8B%E5%8E%8B%E7%BC%A9%E6%96%87%E4%BB%B6%E5%91%BD%E4%BB%A4/" class="article-date">
+  <time datetime="2020-05-27T12:59:55.226Z" itemprop="datePublished">2020-05-27</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/05/27/Ubuntu%E8%A7%A3%E5%8E%8B%E5%8E%8B%E7%BC%A9%E6%96%87%E4%BB%B6%E5%91%BD%E4%BB%A4/">Ubuntu解压压缩文件命令</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ul>
+<li><p>解压tar.gz</p>
+<p><code>sudo tar xzvf openvpn-2.4.8.tar.gz -C /usr/local/bin/</code></p>
+</li>
+<li><p>解压tar.xz</p>
+<p><code>sudo tar xJvf node-v12.17.0-linux-x64.tar.xz -C /usr/local/bin/</code></p>
+</li>
+<li><p>解压tar.bz2</p>
+<p><code>sudo tar xjvf openvpn-2.4.8.tar.bz2 -C /usr/local/bin/</code></p>
+</li>
+<li><p>解压zip</p>
+<p><code>unzip -d ~/Documents git-recipes-master.zip</code></p>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/05/27/Ubuntu%E8%A7%A3%E5%8E%8B%E5%8E%8B%E7%BC%A9%E6%96%87%E4%BB%B6%E5%91%BD%E4%BB%A4/" data-id="ckapgtl9x00031w7yb0im1wz5" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-客户端发送HTTP请求两种方式" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/05/27/%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%8F%91%E9%80%81HTTP%E8%AF%B7%E6%B1%82%E4%B8%A4%E7%A7%8D%E6%96%B9%E5%BC%8F/" class="article-date">
+  <time datetime="2020-05-27T12:59:55.226Z" itemprop="datePublished">2020-05-27</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/05/27/%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%8F%91%E9%80%81HTTP%E8%AF%B7%E6%B1%82%E4%B8%A4%E7%A7%8D%E6%96%B9%E5%BC%8F/">客户端发送HTTP请求两种方式</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="1-GET-Method"><a href="#1-GET-Method" class="headerlink" title="1. GET Method"></a>1. GET Method</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -i -X GET -u cmc:cmc1234! <span class="string">"http://54.169.119.156/cmc/cisco_whitelist_1_1/?filter=%7B'uuid':'111111111'%7D"</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">requests.get(url=<span class="string">'http://54.169.119.156/cmc/cisco_whitelist_1_1'</span>, auth=(<span class="string">'cmc'</span>, <span class="string">'cmc1234!'</span>), params=&#123;<span class="string">'filter'</span>: json.dumps(&#123;<span class="string">'uuid'</span>: <span class="string">'111111111'</span>&#125;)&#125;)</span><br></pre></td></tr></table></figure>
+<h2 id="2-POST-method"><a href="#2-POST-method" class="headerlink" title="2. POST method"></a>2. POST method</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -i -X POST -u cmc:cmc1234! -H <span class="string">"Content-Type: application/json"</span> -d <span class="string">"&#123;'uuid':'111111111'&#125;"</span> http://54.169.119.156/cmc/cisco_whitelist_1_1</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">requests.post(url=<span class="string">'http://54.169.119.156/cmc/cisco_whitelist_1_1'</span>, auth=(<span class="string">'cmc'</span>, <span class="string">'cmc1234!'</span>), data=<span class="string">"&#123;'uuid': '111111111'&#125;"</span>, headers=&#123;<span class="string">"Content-Type"</span>: <span class="string">"application/json"</span>&#125;)</span><br></pre></td></tr></table></figure>
+
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/05/27/%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%8F%91%E9%80%81HTTP%E8%AF%B7%E6%B1%82%E4%B8%A4%E7%A7%8D%E6%96%B9%E5%BC%8F/" data-id="ckapgtla300051w7y1b291jvt" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Ajax传输数据两种常用方式" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/05/27/Ajax%E4%BC%A0%E8%BE%93%E6%95%B0%E6%8D%AE%E4%B8%A4%E7%A7%8D%E5%B8%B8%E7%94%A8%E6%96%B9%E5%BC%8F/" class="article-date">
+  <time datetime="2020-05-27T12:59:55.218Z" itemprop="datePublished">2020-05-27</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/05/27/Ajax%E4%BC%A0%E8%BE%93%E6%95%B0%E6%8D%AE%E4%B8%A4%E7%A7%8D%E5%B8%B8%E7%94%A8%E6%96%B9%E5%BC%8F/">Ajax传输数据两种常用方式</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="1-“application-x-www-form-urlencoded”"><a href="#1-“application-x-www-form-urlencoded”" class="headerlink" title="1. “application/x-www-form-urlencoded”"></a>1. “application/x-www-form-urlencoded”</h2><h3 id="Javascript"><a href="#Javascript" class="headerlink" title="Javascript"></a>Javascript</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> cid = <span class="number">5</span>;</span><br><span class="line"><span class="keyword">var</span> obj = <span class="string">'&#123;"cisco_whitelist_5_4": "nanjing"&#125;'</span>;</span><br><span class="line">$.ajax(&#123;</span><br><span class="line">    url: <span class="string">"/serialnumberconsole/download/"</span>,</span><br><span class="line">    type: <span class="string">'POST'</span>,</span><br><span class="line">    <span class="keyword">async</span>: <span class="literal">true</span>,</span><br><span class="line">    data: &#123;<span class="string">"cid"</span>: cid, <span class="string">"obj"</span>: <span class="built_in">JSON</span>.stringify(obj)&#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h3 id="Python"><a href="#Python" class="headerlink" title="Python"></a>Python</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> request.method == <span class="string">'POST'</span>:</span><br><span class="line">    cid = int(request.POST.get(<span class="string">'cid'</span>, <span class="string">'-1'</span>))</span><br><span class="line">    obj = request.POST.get(<span class="string">'obj'</span>, <span class="literal">None</span>)</span><br><span class="line">    data = json.loads(obj)</span><br><span class="line">    body = request.body</span><br></pre></td></tr></table></figure>
+<h3 id="Result"><a href="#Result" class="headerlink" title="Result"></a>Result</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cid &#x3D; &#123;int&#125; 5</span><br><span class="line">obj &#x3D; &#123;str&#125; &#39;&#123;&quot;cisco_whitelist_5_4&quot;:&quot;nanjing&quot;&#125;&#39;</span><br><span class="line">data &#x3D; &#123;dict&#125; &lt;class &#39;dict&#39;&gt;: &#123;&#39;cisco_whitelist_5_4&#39;: &#39;nanjing&#39;&#125;</span><br><span class="line">body &#x3D; &#123;bytes&#125; b&#39;cid&#x3D;5&amp;obj&#x3D;%7B%22cisco_whitelist_5_4%22%3A%22nanjing%22%7D&#39;</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-“application-json”"><a href="#2-“application-json”" class="headerlink" title="2. “application/json”"></a>2. “application/json”</h2><h3 id="Javascript-1"><a href="#Javascript-1" class="headerlink" title="Javascript"></a>Javascript</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> cid = <span class="number">5</span>;</span><br><span class="line"><span class="keyword">var</span> obj = <span class="string">'&#123;"cisco_whitelist_5_4": "nanjing"&#125;'</span>;</span><br><span class="line">$.ajax(&#123;</span><br><span class="line">    url: <span class="string">"/serialnumberconsole/download/"</span>,</span><br><span class="line">    type: <span class="string">'POST'</span>,</span><br><span class="line">    <span class="keyword">async</span>: <span class="literal">true</span>,</span><br><span class="line">    data: <span class="built_in">JSON</span>.stringify(&#123;<span class="string">"cid"</span>: cid, <span class="string">"obj"</span>: obj&#125;),</span><br><span class="line">    contentType: <span class="string">"application/json"</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h3 id="Python-1"><a href="#Python-1" class="headerlink" title="Python"></a>Python</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> request.method == <span class="string">'POST'</span>:</span><br><span class="line">    body = request.body</span><br><span class="line">    data = json.loads(body)</span><br></pre></td></tr></table></figure>
+<h3 id="Result-1"><a href="#Result-1" class="headerlink" title="Result"></a>Result</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">body &#x3D; &#123;bytes&#125; b&#39;&#123;&quot;cid&quot;:&quot;5&quot;,&quot;obj&quot;:&#123;&quot;cisco_whitelist_5_4&quot;:&quot;nanjing&quot;&#125;&#125;&#39;</span><br><span class="line">data &#x3D; &#123;dict&#125; &lt;class &#39;dict&#39;&gt;: &#123;&#39;cid&#39;: &#39;5&#39;, &#39;obj&#39;: &#123;&#39;cisco_whitelist_5_4&#39;: &#39;nanjing&#39;&#125;&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/05/27/Ajax%E4%BC%A0%E8%BE%93%E6%95%B0%E6%8D%AE%E4%B8%A4%E7%A7%8D%E5%B8%B8%E7%94%A8%E6%96%B9%E5%BC%8F/" data-id="ckapgtl9f00001w7ydzzl8a78" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/05/27/hello-world/" class="article-date">
+  <time datetime="2020-05-26T17:07:50.497Z" itemprop="datePublished">2020-05-27</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/05/27/hello-world/">Hello World</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/05/27/hello-world/" data-id="ckapgtla000041w7y1zukdem0" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">May 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/05/27/Ubuntu%E6%90%AD%E5%BB%BAHexo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">Ubuntu搭建Hexo个人博客</a>
+          </li>
+        
+          <li>
+            <a href="/2020/05/27/Ubuntu%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85vim%E6%94%AF%E6%8C%81%E7%B3%BB%E7%BB%9F%E5%89%AA%E8%B4%B4%E6%9D%BF/">Ubuntu环境安装vim支持系统剪贴板</a>
+          </li>
+        
+          <li>
+            <a href="/2020/05/27/Ubuntu%E7%8E%AF%E5%A2%83%E8%AE%BE%E7%BD%AE%E5%91%BD%E4%BB%A4%E5%88%AB%E5%90%8D/">Ubuntu环境设置命令别名</a>
+          </li>
+        
+          <li>
+            <a href="/2020/05/27/Ubuntu%E8%A7%A3%E5%8E%8B%E5%8E%8B%E7%BC%A9%E6%96%87%E4%BB%B6%E5%91%BD%E4%BB%A4/">Ubuntu解压压缩文件命令</a>
+          </li>
+        
+          <li>
+            <a href="/2020/05/27/%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%8F%91%E9%80%81HTTP%E8%AF%B7%E6%B1%82%E4%B8%A4%E7%A7%8D%E6%96%B9%E5%BC%8F/">客户端发送HTTP请求两种方式</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
