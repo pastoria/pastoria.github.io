@@ -87,7 +87,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <ul>
-<li><p>安装git    </p>
+<li><p>安装git</p>
 <p><code>sudo apt-get install git</code></p>
 </li>
 <li><p><a href="https://nodejs.org/" target="_blank" rel="noopener">Node.js官网</a>下载Linux Binaries (x64)安装包</p>
@@ -108,6 +108,25 @@
 </li>
 <li><p>安装Hexo</p>
 <p><code>sudo npm install hexo-cli -g</code></p>
+</li>
+<li><p>创建并初始化blog目录</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo init blog</span><br><span class="line"><span class="built_in">cd</span> blog</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>写文章生成网页本地预览</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">hexo new <span class="string">"title"</span></span><br><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+
+<h6 id="gt-INFO-Hexo-is-running-at-http-localhost-4000-Press-Ctrl-C-to-stop"><a href="#gt-INFO-Hexo-is-running-at-http-localhost-4000-Press-Ctrl-C-to-stop" class="headerlink" title="&gt; INFO  Hexo is running at http://localhost:4000 . Press Ctrl+C to stop."></a>&gt; <em>INFO  Hexo is running at <a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a> . Press Ctrl+C to stop.</em></h6></li>
+<li><p>安装hexo部署插件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> blog</span><br><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>配置_config.yml部署参数</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: &#39;git&#39;</span><br><span class="line">  repo: https:&#x2F;&#x2F;github.com&#x2F;pastoria&#x2F;pastoria.github.io</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>部署到github pages</p>
+<p><code>hexo d</code></p>
+<blockquote>
+<p>更新文章并部署网站的快捷命令：hexo g -d 或者 hexo d -g</p>
+</blockquote>
 </li>
 </ul>
 
