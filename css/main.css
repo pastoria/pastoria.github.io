@@ -1367,11 +1367,6 @@ pre code {
   position: fixed;
   top: 0;
 }
-@media (max-width: 991px) {
-  .sidebar {
-    display: none;
-  }
-}
 .sidebar-inner {
   color: #999;
   padding: 18px 10px;
@@ -1431,7 +1426,7 @@ pre code {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #1a8acd;
+  background: #ff8ead;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -1550,7 +1545,6 @@ pre code {
   .sidebar-toggle {
     left: 20px;
     opacity: 0.8;
-    display: none;
   }
 }
 .sidebar-toggle:hover .toggle-line {
