@@ -193,7 +193,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-05-30 22:09:46" itemprop="dateModified" datetime="2020-05-30T22:09:46+08:00">2020-05-30</time>
+                <time title="修改时间：2020-05-30 22:19:18" itemprop="dateModified" datetime="2020-05-30T22:19:18+08:00">2020-05-30</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -201,7 +201,7 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Linux/" itemprop="url" rel="index"><span itemprop="name">Linux</span></a>
+                  <a href="/categories/Web/" itemprop="url" rel="index"><span itemprop="name">Web</span></a>
                 </span>
             </span>
 
@@ -458,7 +458,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/05/27/Ubuntu%E8%A7%A3%E5%8E%8B%E5%8E%8B%E7%BC%A9%E6%96%87%E4%BB%B6%E5%91%BD%E4%BB%A4/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/05/27/%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%8F%91%E9%80%81HTTP%E8%AF%B7%E6%B1%82%E4%B8%A4%E7%A7%8D%E6%96%B9%E5%BC%8F/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/author.jpg">
@@ -472,7 +472,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2020/05/27/Ubuntu%E8%A7%A3%E5%8E%8B%E5%8E%8B%E7%BC%A9%E6%96%87%E4%BB%B6%E5%91%BD%E4%BB%A4/" class="post-title-link" itemprop="url">Ubuntu解压压缩文件命令</a>
+            <a href="/2020/05/27/%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%8F%91%E9%80%81HTTP%E8%AF%B7%E6%B1%82%E4%B8%A4%E7%A7%8D%E6%96%B9%E5%BC%8F/" class="post-title-link" itemprop="url">客户端发送HTTP请求两种方式</a>
         </h2>
 
         <div class="post-meta">
@@ -489,7 +489,88 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-05-30 22:13:21" itemprop="dateModified" datetime="2020-05-30T22:13:21+08:00">2020-05-30</time>
+                <time title="修改时间：2020-05-30 22:16:35" itemprop="dateModified" datetime="2020-05-30T22:16:35+08:00">2020-05-30</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Web/" itemprop="url" rel="index"><span itemprop="name">Web</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="1-GET-Method"><a href="#1-GET-Method" class="headerlink" title="1. GET Method"></a>1. GET Method</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -i -X GET -u cmc:cmc1234! <span class="string">"http://54.169.119.156/cmc/cisco_whitelist_1_1/?filter=%7B'uuid':'111111111'%7D"</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">requests.get(url=<span class="string">'http://54.169.119.156/cmc/cisco_whitelist_1_1'</span>, auth=(<span class="string">'cmc'</span>, <span class="string">'cmc1234!'</span>), params=&#123;<span class="string">'filter'</span>: json.dumps(&#123;<span class="string">'uuid'</span>: <span class="string">'111111111'</span>&#125;)&#125;)</span><br></pre></td></tr></table></figure>
+<h2 id="2-POST-method"><a href="#2-POST-method" class="headerlink" title="2. POST method"></a>2. POST method</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -i -X POST -u cmc:cmc1234! -H <span class="string">"Content-Type: application/json"</span> -d <span class="string">"&#123;'uuid':'111111111'&#125;"</span> http://54.169.119.156/cmc/cisco_whitelist_1_1</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">requests.post(url=<span class="string">'http://54.169.119.156/cmc/cisco_whitelist_1_1'</span>, auth=(<span class="string">'cmc'</span>, <span class="string">'cmc1234!'</span>), data=<span class="string">"&#123;'uuid': '111111111'&#125;"</span>, headers=&#123;<span class="string">"Content-Type"</span>: <span class="string">"application/json"</span>&#125;)</span><br></pre></td></tr></table></figure>
+
+
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/05/27/Linux%E8%A7%A3%E5%8E%8B%E5%8E%8B%E7%BC%A9%E6%96%87%E4%BB%B6%E5%91%BD%E4%BB%A4/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/author.jpg">
+      <meta itemprop="name" content="萝卜">
+      <meta itemprop="description" content="直到这一刻微笑着说话为止,我至少流下了一公升眼泪">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="萝卜头の技术博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/05/27/Linux%E8%A7%A3%E5%8E%8B%E5%8E%8B%E7%BC%A9%E6%96%87%E4%BB%B6%E5%91%BD%E4%BB%A4/" class="post-title-link" itemprop="url">Linux解压压缩文件命令</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-05-27 20:59:55" itemprop="dateCreated datePublished" datetime="2020-05-27T20:59:55+08:00">2020-05-27</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-05-30 22:21:28" itemprop="dateModified" datetime="2020-05-30T22:21:28+08:00">2020-05-30</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -545,87 +626,6 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/05/27/%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%8F%91%E9%80%81HTTP%E8%AF%B7%E6%B1%82%E4%B8%A4%E7%A7%8D%E6%96%B9%E5%BC%8F/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/author.jpg">
-      <meta itemprop="name" content="萝卜">
-      <meta itemprop="description" content="直到这一刻微笑着说话为止,我至少流下了一公升眼泪">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="萝卜头の技术博客">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/05/27/%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%8F%91%E9%80%81HTTP%E8%AF%B7%E6%B1%82%E4%B8%A4%E7%A7%8D%E6%96%B9%E5%BC%8F/" class="post-title-link" itemprop="url">客户端发送HTTP请求两种方式</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-05-27 20:59:55" itemprop="dateCreated datePublished" datetime="2020-05-27T20:59:55+08:00">2020-05-27</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-05-30 22:11:54" itemprop="dateModified" datetime="2020-05-30T22:11:54+08:00">2020-05-30</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Web/" itemprop="url" rel="index"><span itemprop="name">Web</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="1-GET-Method"><a href="#1-GET-Method" class="headerlink" title="1. GET Method"></a>1. GET Method</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -i -X GET -u cmc:cmc1234! <span class="string">"http://54.169.119.156/cmc/cisco_whitelist_1_1/?filter=%7B'uuid':'111111111'%7D"</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">requests.get(url=<span class="string">'http://54.169.119.156/cmc/cisco_whitelist_1_1'</span>, auth=(<span class="string">'cmc'</span>, <span class="string">'cmc1234!'</span>), params=&#123;<span class="string">'filter'</span>: json.dumps(&#123;<span class="string">'uuid'</span>: <span class="string">'111111111'</span>&#125;)&#125;)</span><br></pre></td></tr></table></figure>
-<h2 id="2-POST-method"><a href="#2-POST-method" class="headerlink" title="2. POST method"></a>2. POST method</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -i -X POST -u cmc:cmc1234! -H <span class="string">"Content-Type: application/json"</span> -d <span class="string">"&#123;'uuid':'111111111'&#125;"</span> http://54.169.119.156/cmc/cisco_whitelist_1_1</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">requests.post(url=<span class="string">'http://54.169.119.156/cmc/cisco_whitelist_1_1'</span>, auth=(<span class="string">'cmc'</span>, <span class="string">'cmc1234!'</span>), data=<span class="string">"&#123;'uuid': '111111111'&#125;"</span>, headers=&#123;<span class="string">"Content-Type"</span>: <span class="string">"application/json"</span>&#125;)</span><br></pre></td></tr></table></figure>
-
-
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/05/27/Ajax%E4%BC%A0%E8%BE%93%E6%95%B0%E6%8D%AE%E4%B8%A4%E7%A7%8D%E5%B8%B8%E7%94%A8%E6%96%B9%E5%BC%8F/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -657,7 +657,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-05-30 22:12:05" itemprop="dateModified" datetime="2020-05-30T22:12:05+08:00">2020-05-30</time>
+                <time title="修改时间：2020-05-30 22:15:31" itemprop="dateModified" datetime="2020-05-30T22:15:31+08:00">2020-05-30</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -861,7 +861,7 @@
 
 
   <div>
-    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=298 height=52 src="//music.163.com/outchain/player?type=2&id=1400229953&auto=1&height=32"></iframe>
+    <iframe allow="autoplay" frameborder="no" border="0" marginwidth="0" marginheight="0" width=298 height=52 src="//music.163.com/outchain/player?type=2&id=1400229953&auto=1&height=32"></iframe>
   </div>
 
       </div>
