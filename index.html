@@ -190,7 +190,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-06-04 01:02:43" itemprop="dateModified" datetime="2020-06-04T01:02:43+08:00">2020-06-04</time>
+                <time title="修改时间：2020-06-04 01:10:56" itemprop="dateModified" datetime="2020-06-04T01:10:56+08:00">2020-06-04</time>
               </span>
 
           
@@ -214,11 +214,12 @@
 <p><code>import logging</code></p>
 </li>
 <li><p>配置</p>
-<p><code>logging.basicConfig(level=logging.DEBUG, format=&#39;[%(asctime)s %(filename)s func:%(funcName)s line:%(lineno)d %(threadName)s %(levelname)s] %(message)s&#39;)</code></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">logging.basicConfig(level=logging.DEBUG, format=<span class="string">'[%(asctime)s %(filename)s func:%(funcName)s line:%(lineno)d %(threadName)s %(levelname)s] %(message)s'</span>)</span><br></pre></td></tr></table></figure>
+
 <p>可以选择很多消息级别，如debug、info、warning、error以及critical。通过赋予不同的消息级别，开发者就可以只输出错误信息到特定的日志文件，或者只在调试时输出调试信息。</p>
 <p>basicConfig函数各参数：</p>
-<p>filename：指定日志文件名；</p>
-<p>filemode：和file函数意义相同，指定日志文件的打开模式，’w’或者’a’；</p>
+<p>filename：指定日志文件名</p>
+<p>filemode：和file函数意义相同，指定日志文件的打开模式，’w’或者’a’</p>
 <p>format：指定输出的格式和内容</p>
 <table>
 <thead>
@@ -288,8 +289,8 @@
 <td align="left">日志被创建的相对时间，以毫秒为单位</td>
 </tr>
 </tbody></table>
-<p>datefmt：指定时间格式，同time.strftime()；</p>
-<p>level：设置日志级别，默认为logging.WARNNING；</p>
+<p>datefmt：指定时间格式，同time.strftime()</p>
+<p>level：设置日志级别，默认为logging.WARNNING</p>
 <table>
 <thead>
 <tr>
@@ -322,7 +323,7 @@
 <td>调试过程中使用DEBUG等级，如算法中每个循环的中间状态</td>
 </tr>
 </tbody></table>
-<p>stream：指定将日志的输出流，可以指定输出到sys.stderr，sys.stdout或者文件，默认输出到sys.stderr，当stream和filename同时指定时，stream被忽略；</p>
+<p>stream：指定将日志的输出流，可以指定输出到sys.stderr，sys.stdout或者文件，默认输出到sys.stderr，当stream和filename同时指定时，stream被忽略</p>
 </li>
 <li><p>通过logging.getLogger(name)来实例化，如果name不给定就用root。名字是以点号分割的命名方式命名的(a.b.c)。对同一个名字多次调用logging.getLogger()方法会返回同一个logger对象。这种命名方式下，后面的logger是前面logger的子logger，自动继承父logger的log信息。</p>
 <p><code>logger = logging.getLogger(__name__)</code></p>
