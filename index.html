@@ -132,7 +132,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">9</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">10</span></a>
 
   </li>
   </ul>
@@ -155,6 +155,100 @@
 
           <div class="content index posts-expand">
             
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/08/Git%E5%8F%8C%E7%B3%BB%E7%BB%9F%E4%BA%A4%E6%9B%BF%E4%BD%BF%E7%94%A8%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/author.jpg">
+      <meta itemprop="name" content="萝卜">
+      <meta itemprop="description" content="直到这一刻微笑着说话为止,我至少流下了一公升眼泪">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="萝卜头の技术博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/06/08/Git%E5%8F%8C%E7%B3%BB%E7%BB%9F%E4%BA%A4%E6%9B%BF%E4%BD%BF%E7%94%A8%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/" class="post-title-link" itemprop="url">Git双系统交替使用遇到的问题</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-06-08 22:51:12" itemprop="dateCreated datePublished" datetime="2020-06-08T22:51:12+08:00">2020-06-08</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-06-07 18:20:08" itemprop="dateModified" datetime="2020-06-07T18:20:08+08:00">2020-06-07</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <blockquote>
+<p> 在双系统环境下（如Linux，Windows）交替使用Git，可能会遇到一些问题。通过设置Git配置项可以解决。</p>
+</blockquote>
+<ol>
+<li><p>Linux下文件换行符号是LF，而Windows下文件换行符号是CRLF。为了避免版本库中源文件两种换行符混杂的情况，可以在Windows中设置Git配置项<code>core.autocrlf=true</code>。表示在检出版本库时，自动将LF转换成CRLF;在提交版本库时，自动将CRLF转换成LF。</p>
+</li>
+<li><p>在Windows系统中检出之前在Linux系统中提交的文件时，会发现某些文件变成了已修改的状态，实际上本地文件和版本库中的文件内容完全一样。这时候无论使用<code>git checkout -- &lt;file&gt;</code>还是<code>git reset --hard HEAD</code>都无法改变已修改的状态，导致无法拉取代码或者切换分支。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">$ git status</span><br><span class="line">On branch dev</span><br><span class="line">Your branch is up to date with <span class="string">'origin/dev'</span>.</span><br><span class="line"></span><br><span class="line">Changes not staged <span class="keyword">for</span> commit:</span><br><span class="line">  (use <span class="string">"git add &lt;file&gt;..."</span> to update what will be committed)</span><br><span class="line">  (use <span class="string">"git restore &lt;file&gt;..."</span> to discard changes <span class="keyword">in</span> working directory)</span><br><span class="line">        modified:   webConsoleApp/docs/tools/merge_dev2test</span><br><span class="line">        modified:   webConsoleApp/docs/tools/merge_test2master</span><br><span class="line">        modified:   webConsoleApp/manage.py</span><br><span class="line">        modified:   webConsoleApp/serialNumberConsole/data_center_api.py</span><br><span class="line">        modified:   webConsoleApp/static/images/add_button.svg</span><br><span class="line">        modified:   webConsoleApp/static/images/download_big.svg</span><br><span class="line">        modified:   webConsoleApp/static/images/download_small.svg</span><br><span class="line">        modified:   webConsoleApp/static/images/remove_button.svg</span><br><span class="line">        modified:   webConsoleApp/static/images/remove_button_disable.svg</span><br><span class="line"></span><br><span class="line">no changes added to commit (use <span class="string">"git add"</span> and/or <span class="string">"git commit -a"</span>)</span><br></pre></td></tr></table></figure>
+
+<p>比较单个文件时发现本地和版本库的文件模式不同。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ git diff webConsoleApp/manage.py</span><br><span class="line">diff --git a/webConsoleApp/manage.py b/webConsoleApp/manage.py</span><br><span class="line">old mode 100755</span><br><span class="line">new mode 100644</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ ls -l webConsoleApp/manage.py</span><br><span class="line">-rwxr-xr-x 1 Eric 197121 654 六月    7 15:57 webConsoleApp/manage.py*</span><br></pre></td></tr></table></figure>
+
+<p>解决方法：Git有个配置项core.filemode，值为true时Git会比较文件模式，为false时忽略文件模式。只要将全局配置项设为false，并删除项目配置项即可。<strong>注意：项目配置项如果为true，会覆盖全局配置项false，造成改动不生效。</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global core.filemode <span class="literal">false</span></span><br><span class="line">$ git config --<span class="built_in">unset</span> core.filemode</span><br></pre></td></tr></table></figure>
+
+<p>现在本地文件和版本库状态一致了</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ git status</span><br><span class="line">On branch dev</span><br><span class="line">Your branch is up to date with <span class="string">'origin/dev'</span>.</span><br><span class="line"></span><br><span class="line">nothing to commit, working tree clean</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>扩展知识</p>
+<p>Git中平时用到的有三种配置文件：系统，全局，项目 </p>
+<p>system: {安装目录}/etc/gitconfig</p>
+<p>global: {用户目录}/.gitconfig</p>
+<p>repository: {项目目录}/.git/config</p>
+</li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+
+    <div>
+    </div>
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
       
   
   
@@ -1296,7 +1390,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">9</span>
+          <span class="site-state-item-count">10</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>

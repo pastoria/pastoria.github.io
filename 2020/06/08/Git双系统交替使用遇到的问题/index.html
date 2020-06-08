@@ -20,21 +20,19 @@
     var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Pisces","version":"8.0.0-rc.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":true,"show_result":true,"style":"default"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="安装git sudo apt-get install git  Node.js官网下载Linux Binaries (x64)安装包 node-v12.17.0-linux-x64.tar.xz  将安装包解压到指定目录 sudo tar xJvf node-v12.17.0-linux-x64.tar.xz -C &#x2F;usr&#x2F;local&#x2F;bin&#x2F;  创建软链接 123cd &#x2F;usr&#x2F;local&#x2F;">
+  <meta name="description" content="在双系统环境下（如Linux，Windows）交替使用Git，可能会遇到一些问题。通过设置Git配置项可以解决。   Linux下文件换行符号是LF，而Windows下文件换行符号是CRLF。为了避免版本库中源文件两种换行符混杂的情况，可以在Windows中设置Git配置项core.autocrlf&#x3D;true。表示在检出版本库时，自动将LF转换成CRLF;在提交版本库时，自动将CRLF转换成L">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Ubuntu搭建Hexo个人博客">
-<meta property="og:url" content="http://yoursite.com/2020/05/27/Ubuntu%E6%90%AD%E5%BB%BAHexo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/index.html">
+<meta property="og:title" content="Git双系统交替使用遇到的问题">
+<meta property="og:url" content="http://yoursite.com/2020/06/08/Git%E5%8F%8C%E7%B3%BB%E7%BB%9F%E4%BA%A4%E6%9B%BF%E4%BD%BF%E7%94%A8%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/index.html">
 <meta property="og:site_name" content="萝卜头の技术博客">
-<meta property="og:description" content="安装git sudo apt-get install git  Node.js官网下载Linux Binaries (x64)安装包 node-v12.17.0-linux-x64.tar.xz  将安装包解压到指定目录 sudo tar xJvf node-v12.17.0-linux-x64.tar.xz -C &#x2F;usr&#x2F;local&#x2F;bin&#x2F;  创建软链接 123cd &#x2F;usr&#x2F;local&#x2F;">
+<meta property="og:description" content="在双系统环境下（如Linux，Windows）交替使用Git，可能会遇到一些问题。通过设置Git配置项可以解决。   Linux下文件换行符号是LF，而Windows下文件换行符号是CRLF。为了避免版本库中源文件两种换行符混杂的情况，可以在Windows中设置Git配置项core.autocrlf&#x3D;true。表示在检出版本库时，自动将LF转换成CRLF;在提交版本库时，自动将CRLF转换成L">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-05-27T15:53:18.000Z">
-<meta property="article:modified_time" content="2020-05-31T05:06:16.151Z">
+<meta property="article:published_time" content="2020-06-08T14:51:12.307Z">
+<meta property="article:modified_time" content="2020-06-07T10:20:08.435Z">
 <meta property="article:author" content="萝卜">
-<meta property="article:tag" content="Ubuntu">
-<meta property="article:tag" content="Hexo">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://yoursite.com/2020/05/27/Ubuntu%E6%90%AD%E5%BB%BAHexo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">
+<link rel="canonical" href="http://yoursite.com/2020/06/08/Git%E5%8F%8C%E7%B3%BB%E7%BB%9F%E4%BA%A4%E6%9B%BF%E4%BD%BF%E7%94%A8%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/">
 
 
 <script id="page-configurations">
@@ -47,7 +45,7 @@
   };
 </script>
 
-  <title>Ubuntu搭建Hexo个人博客 | 萝卜头の技术博客</title>
+  <title>Git双系统交替使用遇到的问题 | 萝卜头の技术博客</title>
   
 
 
@@ -164,7 +162,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/05/27/Ubuntu%E6%90%AD%E5%BB%BAHexo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/08/Git%E5%8F%8C%E7%B3%BB%E7%BB%9F%E4%BA%A4%E6%9B%BF%E4%BD%BF%E7%94%A8%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/author.jpg">
@@ -177,7 +175,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Ubuntu搭建Hexo个人博客
+          Git双系统交替使用遇到的问题
         </h1>
 
         <div class="post-meta">
@@ -187,24 +185,15 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2020-05-27 23:53:18" itemprop="dateCreated datePublished" datetime="2020-05-27T23:53:18+08:00">2020-05-27</time>
+              <time title="创建时间：2020-06-08 22:51:12" itemprop="dateCreated datePublished" datetime="2020-06-08T22:51:12+08:00">2020-06-08</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-05-31 13:06:16" itemprop="dateModified" datetime="2020-05-31T13:06:16+08:00">2020-05-31</time>
+                <time title="修改时间：2020-06-07 18:20:08" itemprop="dateModified" datetime="2020-06-07T18:20:08+08:00">2020-06-07</time>
               </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Web/" itemprop="url" rel="index"><span itemprop="name">Web</span></a>
-                </span>
-            </span>
 
           
 
@@ -217,46 +206,33 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <ul>
-<li><p>安装git</p>
-<p><code>sudo apt-get install git</code></p>
+        <blockquote>
+<p> 在双系统环境下（如Linux，Windows）交替使用Git，可能会遇到一些问题。通过设置Git配置项可以解决。</p>
+</blockquote>
+<ol>
+<li><p>Linux下文件换行符号是LF，而Windows下文件换行符号是CRLF。为了避免版本库中源文件两种换行符混杂的情况，可以在Windows中设置Git配置项<code>core.autocrlf=true</code>。表示在检出版本库时，自动将LF转换成CRLF;在提交版本库时，自动将CRLF转换成LF。</p>
 </li>
-<li><p><a href="https://nodejs.org/" target="_blank" rel="noopener">Node.js官网</a>下载Linux Binaries (x64)安装包</p>
-<p><code>node-v12.17.0-linux-x64.tar.xz</code></p>
-</li>
-<li><p>将安装包解压到指定目录</p>
-<p><code>sudo tar xJvf node-v12.17.0-linux-x64.tar.xz -C /usr/local/bin/</code></p>
-</li>
-<li><p>创建软链接</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /usr/<span class="built_in">local</span>/bin/</span><br><span class="line">sudo ln -s node-v12.17.0-linux-x64/bin/node ./node</span><br><span class="line">sudo ln -s node-v12.17.0-linux-x64/bin/npm ./npm</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>确保”/usr/local/bin/“在PATH路径中</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="variable">$PATH</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/home/eric/.pyenv/plugins/pyenv-virtualenv/shims:/home/eric/.pyenv/shims:/home/eric/.pyenv/bin:/home/eric/bin:/home/eric/.<span class="built_in">local</span>/bin:/usr/<span class="built_in">local</span>/sbin:**/usr/<span class="built_in">local</span>/bin**:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/<span class="built_in">local</span>/games:/snap/bin</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>在用户目录中查看node及npm版本</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~</span><br><span class="line">node -v</span><br><span class="line">v12.17.0</span><br><span class="line">npm -v</span><br><span class="line">6.14.4</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>安装Hexo</p>
-<p><code>sudo npm install hexo-cli -g</code></p>
-</li>
-<li><p>创建并初始化blog目录</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo init blog</span><br><span class="line"><span class="built_in">cd</span> blog</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>写文章生成网页本地预览</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">hexo new <span class="string">"title"</span></span><br><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+<li><p>在Windows系统中检出之前在Linux系统中提交的文件时，会发现某些文件变成了已修改的状态，实际上本地文件和版本库中的文件内容完全一样。这时候无论使用<code>git checkout -- &lt;file&gt;</code>还是<code>git reset --hard HEAD</code>都无法改变已修改的状态，导致无法拉取代码或者切换分支。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">$ git status</span><br><span class="line">On branch dev</span><br><span class="line">Your branch is up to date with <span class="string">'origin/dev'</span>.</span><br><span class="line"></span><br><span class="line">Changes not staged <span class="keyword">for</span> commit:</span><br><span class="line">  (use <span class="string">"git add &lt;file&gt;..."</span> to update what will be committed)</span><br><span class="line">  (use <span class="string">"git restore &lt;file&gt;..."</span> to discard changes <span class="keyword">in</span> working directory)</span><br><span class="line">        modified:   webConsoleApp/docs/tools/merge_dev2test</span><br><span class="line">        modified:   webConsoleApp/docs/tools/merge_test2master</span><br><span class="line">        modified:   webConsoleApp/manage.py</span><br><span class="line">        modified:   webConsoleApp/serialNumberConsole/data_center_api.py</span><br><span class="line">        modified:   webConsoleApp/static/images/add_button.svg</span><br><span class="line">        modified:   webConsoleApp/static/images/download_big.svg</span><br><span class="line">        modified:   webConsoleApp/static/images/download_small.svg</span><br><span class="line">        modified:   webConsoleApp/static/images/remove_button.svg</span><br><span class="line">        modified:   webConsoleApp/static/images/remove_button_disable.svg</span><br><span class="line"></span><br><span class="line">no changes added to commit (use <span class="string">"git add"</span> and/or <span class="string">"git commit -a"</span>)</span><br></pre></td></tr></table></figure>
 
-<h6 id="gt-INFO-Hexo-is-running-at-http-localhost-4000-Press-Ctrl-C-to-stop"><a href="#gt-INFO-Hexo-is-running-at-http-localhost-4000-Press-Ctrl-C-to-stop" class="headerlink" title="&gt; INFO  Hexo is running at http://localhost:4000 . Press Ctrl+C to stop."></a>&gt; <em>INFO  Hexo is running at <a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a> . Press Ctrl+C to stop.</em></h6></li>
-<li><p>安装hexo部署插件</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> blog</span><br><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+<p>比较单个文件时发现本地和版本库的文件模式不同。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ git diff webConsoleApp/manage.py</span><br><span class="line">diff --git a/webConsoleApp/manage.py b/webConsoleApp/manage.py</span><br><span class="line">old mode 100755</span><br><span class="line">new mode 100644</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ ls -l webConsoleApp/manage.py</span><br><span class="line">-rwxr-xr-x 1 Eric 197121 654 六月    7 15:57 webConsoleApp/manage.py*</span><br></pre></td></tr></table></figure>
+
+<p>解决方法：Git有个配置项core.filemode，值为true时Git会比较文件模式，为false时忽略文件模式。只要将全局配置项设为false，并删除项目配置项即可。<strong>注意：项目配置项如果为true，会覆盖全局配置项false，造成改动不生效。</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global core.filemode <span class="literal">false</span></span><br><span class="line">$ git config --<span class="built_in">unset</span> core.filemode</span><br></pre></td></tr></table></figure>
+
+<p>现在本地文件和版本库状态一致了</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ git status</span><br><span class="line">On branch dev</span><br><span class="line">Your branch is up to date with <span class="string">'origin/dev'</span>.</span><br><span class="line"></span><br><span class="line">nothing to commit, working tree clean</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>配置_config.yml部署参数</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">'git'</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">https://github.com/pastoria/pastoria.github.io</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">master</span></span><br></pre></td></tr></table></figure>
+<li><p>扩展知识</p>
+<p>Git中平时用到的有三种配置文件：系统，全局，项目 </p>
+<p>system: {安装目录}/etc/gitconfig</p>
+<p>global: {用户目录}/.gitconfig</p>
+<p>repository: {项目目录}/.git/config</p>
 </li>
-<li><p>部署到GitHub Pages</p>
-<p><code>hexo d</code></p>
-<h6 id="gt-更新文章并部署网站的快捷命令：hexo-g-d-或者-hexo-d-g"><a href="#gt-更新文章并部署网站的快捷命令：hexo-g-d-或者-hexo-d-g" class="headerlink" title="&gt; 更新文章并部署网站的快捷命令：hexo g -d 或者 hexo d -g"></a>&gt; <em>更新文章并部署网站的快捷命令：hexo g -d 或者 hexo d -g</em></h6></li>
-</ul>
+</ol>
 
     </div>
 
@@ -272,10 +248,6 @@
     </div>
 
       <footer class="post-footer">
-          <div class="post-tags">
-              <a href="/tags/Ubuntu/" rel="tag"><i class="fa fa-tag"></i> Ubuntu</a>
-              <a href="/tags/Hexo/" rel="tag"><i class="fa fa-tag"></i> Hexo</a>
-          </div>
 
         
 
@@ -283,13 +255,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2020/05/27/Ubuntu%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85vim%E6%94%AF%E6%8C%81%E7%B3%BB%E7%BB%9F%E5%89%AA%E8%B4%B4%E6%9D%BF/" rel="prev" title="Ubuntu环境安装vim支持系统剪贴板">
-      <i class="fa fa-chevron-left"></i> Ubuntu环境安装vim支持系统剪贴板
+    <a href="/2020/06/06/Python%E7%BA%BF%E7%A8%8B%E6%B1%A0/" rel="prev" title="Python线程池">
+      <i class="fa fa-chevron-left"></i> Python线程池
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2020/06/03/Python%E4%BD%BF%E7%94%A8logger%E6%89%93%E5%8D%B0%E7%A8%8B%E5%BA%8F%E8%BF%90%E8%A1%8C%E6%97%B6%E9%97%B4/" rel="next" title="Python使用logger打印程序运行时间">
-      Python使用logger打印程序运行时间 <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -348,7 +317,6 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-6"><a class="nav-link" href="#gt-INFO-Hexo-is-running-at-http-localhost-4000-Press-Ctrl-C-to-stop"><span class="nav-number">1.</span> <span class="nav-text">&gt; INFO  Hexo is running at http:&#x2F;&#x2F;localhost:4000 . Press Ctrl+C to stop.</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#gt-更新文章并部署网站的快捷命令：hexo-g-d-或者-hexo-d-g"><span class="nav-number">2.</span> <span class="nav-text">&gt; 更新文章并部署网站的快捷命令：hexo g -d 或者 hexo d -g</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
