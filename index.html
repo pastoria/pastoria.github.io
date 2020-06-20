@@ -1,1592 +1,340 @@
+
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-CN" class="loading">
 <head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 4.2.1">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
-  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>萝卜头の技术博客 - 记录开发中的点点滴滴</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate" />
+    <meta name="keywords" content="Fechin,"> 
+    <meta name="description" content="直到这一刻微笑着说话为止,我至少流下了一公升眼泪,"> 
+    <meta name="author" content="萝卜"> 
+    <link rel="alternative" href="atom.xml" title="萝卜头の技术博客" type="application/atom+xml"> 
+    <link rel="icon" href="/img/favicon.png"> 
+    
+    
+<link rel="stylesheet" href="/css/diaspora.css">
 
-<link rel="stylesheet" href="/css/main.css">
+	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({
+              google_ad_client: "ca-pub-8691406134231910",
+              enable_page_level_ads: true
+         });
+    </script>
+    <script async custom-element="amp-auto-ads"
+        src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
+    </script>
+<meta name="generator" content="Hexo 4.2.1"></head>
 
+<body class="loading">
+    <span id="config-title" style="display:none">萝卜头の技术博客</span>
+    <div id="loader"></div>
+    <div class="nav">
+    <ul id="menu-menu" class="menu">
+        
+        <li class="pview menu-item menu-item-type-post_type menu-item-object-page">
+            <a href="//" title="首页" target="_blank" rel="noopener">首页</a>
+        </li>
+        
+        <li class="pview menu-item menu-item-type-post_type menu-item-object-page">
+            <a href="/categories/" title="分类" target="_blank" rel="noopener">分类</a>
+        </li>
+        
+        <li class="pview menu-item menu-item-type-post_type menu-item-object-page">
+            <a href="/tags/" title="标签" target="_blank" rel="noopener">标签</a>
+        </li>
+        
+        <li class="pview menu-item menu-item-type-post_type menu-item-object-page">
+            <a href="/archives/" title="归档" target="_blank" rel="noopener">归档</a>
+        </li>
+        
+        <li class="pview menu-item menu-item-type-post_type menu-item-object-page">
+            <a href="/about/" title="关于" target="_blank" rel="noopener">关于</a>
+        </li>
+        
+    </ul>
+	<span class="target"></span>
+	<center>
+	<div class="hitokoto">
+		<span class="typed" id="hitokoto" data-st="true"></span>
+	</div>
+	</center>
+	
+	<p class="footerlinks">
+		<a href="#" class="iconfont icon-null"></a>
+		
+            <a href="/" title="facebook" class="iconfont icon-facebook" target="_blank" rel="noopener"> </a>
+        
+            <a href="/" title="twitter" class="iconfont icon-twitter" target="_blank" rel="noopener"> </a>
+        
+            <a href="/" title="github" class="iconfont icon-github" target="_blank" rel="noopener"> </a>
+        
+            <a href="/img/logo.png" title="wechat" class="iconfont icon-wechat" target="_blank" rel="noopener"> </a>
+        
+            <a href="mailto:xxxx@gmail.com" title="email" class="iconfont icon-email" target="_blank" rel="noopener"> </a>
+        
+		<a href="#" class="iconfont icon-null"></a>
+	</p>
+	
+    <p id="copyright">
+        &copy; 2020 萝卜.
+        <span> | </span>Powered by <a href="https://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a>
+        <span> | </span>Theme <a href="https://github.com/Fechin/hexo-theme-diaspora" title="Diaspora" target="_blank" rel="noopener">Diaspora</a> by Fechin
+		
+		<span> | </span><a rel="nofollow" href="http://www.beian.miit.gov.cn" target="_blank">冀ICP备xxxxxxx号</a>
+		
+    </p>
+</div>
 
-<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
-
-<script id="hexo-configurations">
-    var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Pisces","version":"8.0.0-rc.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":true,"show_result":true,"style":"default"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
-  </script>
-
-  <meta name="description" content="直到这一刻微笑着说话为止,我至少流下了一公升眼泪">
-<meta property="og:type" content="website">
-<meta property="og:title" content="萝卜头の技术博客">
-<meta property="og:url" content="http://yoursite.com/index.html">
-<meta property="og:site_name" content="萝卜头の技术博客">
-<meta property="og:description" content="直到这一刻微笑着说话为止,我至少流下了一公升眼泪">
-<meta property="og:locale" content="zh_CN">
-<meta property="article:author" content="萝卜">
-<meta name="twitter:card" content="summary">
-
-<link rel="canonical" href="http://yoursite.com/">
-
-
-<script id="page-configurations">
-  // https://hexo.io/docs/variables.html
-  CONFIG.page = {
-    sidebar: "",
-    isHome : true,
-    isPost : false,
-    lang   : 'zh-CN'
-  };
-</script>
-
-  <title>萝卜头の技术博客</title>
-  
-
-
-
-
-
-
-  <noscript>
-  <style>
-  .use-motion .brand,
-  .use-motion .menu-item,
-  .sidebar-inner,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-header { opacity: initial; }
-
-  .use-motion .site-title,
-  .use-motion .site-subtitle {
-    opacity: initial;
-    top: initial;
-  }
-
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
-  </style>
-</noscript>
-
-</head>
-
-<body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
-    <div class="headband"></div>
-
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
-  <div class="site-nav-toggle">
-    <div class="toggle" aria-label="切换导航栏">
-        <span class="toggle-line toggle-line-first"></span>
-        <span class="toggle-line toggle-line-middle"></span>
-        <span class="toggle-line toggle-line-last"></span>
+<div id="container">
+    
+<div id="screen">
+    <div id="mark">
+        <div class="layer" data-depth="0.4">
+            <img src="/img/welcome-cover.jpg" id="cover" crossorigin="anonymous" width="1920" height="1080">
+        </div>
     </div>
-  </div>
+    <div id="vibrant">
+        <svg viewBox="0 0 2880 1620" height="100%" preserveAspectRatio="xMaxYMax slice">
+            <polygon opacity="0.7" points="2000,1620 0,1620 0,0 600,0 "/>
+        </svg>
+        <div></div>
+    </div>
+    <div id="header">
+        <div>
+            <a class="image-logo" href="/"></a>
+			
+            <div class="iconfont icon-menu switchmenu"></div>
+        </div>
+    </div>
+    
+    <div id="post0">
+        <p>六月 08, 2020</p>
+        <h2><a href="/2020/06/08/Git%E5%8F%8C%E7%B3%BB%E7%BB%9F%E4%BA%A4%E6%9B%BF%E4%BD%BF%E7%94%A8%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/" title="Git双系统交替使用遇到的问题" class="posttitle">Git双系统交替使用遇到的问题</a></h2>
+        <p class="summary">
+ 在双系统环境下（如Linux，Windows）交替使用Git，可能会遇到一些问题。通过设置Git配置项可以解决...</p>
+    </div>
+    
+</div>
 
-  <div class="site-meta">
-
-    <a href="/" class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">萝卜头の技术博客</h1>
-      <span class="logo-line-after"><i></i></span>
+    <div id="primary">
+        
+<div class="post">
+    <a href="/2020/06/06/Python%E7%BA%BF%E7%A8%8B%E6%B1%A0/" title="Python线程池">
+        <img src="/img/cover2.jpg" class="cover" width="680" height="440">
     </a>
-      <p class="site-subtitle" itemprop="description">记录开发中的点点滴滴</p>
-  </div>
-
-  <div class="site-nav-right">
-    <div class="toggle popup-trigger">
+    <div class="else">
+        <p>六月 06, 2020</p>
+        <h3><a href="/2020/06/06/Python%E7%BA%BF%E7%A8%8B%E6%B1%A0/" title="Python线程池" class="posttitle">Python线程池</a></h3>
+        <p>
+从Python3.2开始，标准库为我们提供了 concurrent.futures 模块，它提供了 ThreadPoolExecutor (线程池)和P...</p>
     </div>
-  </div>
 </div>
 
 
-
-<nav class="site-nav">
-  <ul id="menu" class="main-menu menu">
-        <li class="menu-item menu-item-home">
-
-    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
-
-  </li>
-        <li class="menu-item menu-item-about">
-
-    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
-
-  </li>
-        <li class="menu-item menu-item-tags">
-
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">3</span></a>
-
-  </li>
-        <li class="menu-item menu-item-categories">
-
-    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">2</span></a>
-
-  </li>
-        <li class="menu-item menu-item-archives">
-
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">10</span></a>
-
-  </li>
-  </ul>
-</nav>
+<div class="post">
+    <a href="/2020/06/03/Python%E4%BD%BF%E7%94%A8logger%E6%89%93%E5%8D%B0%E7%A8%8B%E5%BA%8F%E8%BF%90%E8%A1%8C%E6%97%B6%E9%97%B4/" title="Python使用logger打印程序运行时间">
+        <img src="/img/cover2.jpg" class="cover" width="680" height="440">
+    </a>
+    <div class="else">
+        <p>六月 03, 2020</p>
+        <h3><a href="/2020/06/03/Python%E4%BD%BF%E7%94%A8logger%E6%89%93%E5%8D%B0%E7%A8%8B%E5%BA%8F%E8%BF%90%E8%A1%8C%E6%97%B6%E9%97%B4/" title="Python使用logger打印程序运行时间" class="posttitle">Python使用logger打印程序运行时间</a></h3>
+        <p>
+Python中可以通过导入logging模块和time模块打印程序运行时间
 
 
+logging模块
 
+导入
+import logging
 
-</div>
-    </header>
-
-    
-  <div class="reading-progress-bar"></div>
-
-  <a href="https://github.com/pastoria" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
-
-
-    <main class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          
-
-          <div class="content index posts-expand">
-            
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/08/Git%E5%8F%8C%E7%B3%BB%E7%BB%9F%E4%BA%A4%E6%9B%BF%E4%BD%BF%E7%94%A8%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/author.jpg">
-      <meta itemprop="name" content="萝卜">
-      <meta itemprop="description" content="直到这一刻微笑着说话为止,我至少流下了一公升眼泪">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="萝卜头の技术博客">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/06/08/Git%E5%8F%8C%E7%B3%BB%E7%BB%9F%E4%BA%A4%E6%9B%BF%E4%BD%BF%E7%94%A8%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/" class="post-title-link" itemprop="url">Git双系统交替使用遇到的问题</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-06-08 22:51:12" itemprop="dateCreated datePublished" datetime="2020-06-08T22:51:12+08:00">2020-06-08</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-06-07 18:20:08" itemprop="dateModified" datetime="2020-06-07T18:20:08+08:00">2020-06-07</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <blockquote>
-<p> 在双系统环境下（如Linux，Windows）交替使用Git，可能会遇到一些问题。通过设置Git配置项可以解决。</p>
-</blockquote>
-<ol>
-<li><p>Linux下文件换行符号是LF，而Windows下文件换行符号是CRLF。为了避免版本库中源文件两种换行符混杂的情况，可以在Windows中设置Git配置项<code>core.autocrlf=true</code>。表示在检出版本库时，自动将LF转换成CRLF;在提交版本库时，自动将CRLF转换成LF。</p>
-</li>
-<li><p>在Windows系统中检出之前在Linux系统中提交的文件时，会发现某些文件变成了已修改的状态，实际上本地文件和版本库中的文件内容完全一样。这时候无论使用<code>git checkout -- &lt;file&gt;</code>还是<code>git reset --hard HEAD</code>都无法改变已修改的状态，导致无法拉取代码或者切换分支。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">$ git status</span><br><span class="line">On branch dev</span><br><span class="line">Your branch is up to date with <span class="string">'origin/dev'</span>.</span><br><span class="line"></span><br><span class="line">Changes not staged <span class="keyword">for</span> commit:</span><br><span class="line">  (use <span class="string">"git add &lt;file&gt;..."</span> to update what will be committed)</span><br><span class="line">  (use <span class="string">"git restore &lt;file&gt;..."</span> to discard changes <span class="keyword">in</span> working directory)</span><br><span class="line">        modified:   webConsoleApp/docs/tools/merge_dev2test</span><br><span class="line">        modified:   webConsoleApp/docs/tools/merge_test2master</span><br><span class="line">        modified:   webConsoleApp/manage.py</span><br><span class="line">        modified:   webConsoleApp/serialNumberConsole/data_center_api.py</span><br><span class="line">        modified:   webConsoleApp/static/images/add_button.svg</span><br><span class="line">        modified:   webConsoleApp/static/images/download_big.svg</span><br><span class="line">        modified:   webConsoleApp/static/images/download_small.svg</span><br><span class="line">        modified:   webConsoleApp/static/images/remove_button.svg</span><br><span class="line">        modified:   webConsoleApp/static/images/remove_button_disable.svg</span><br><span class="line"></span><br><span class="line">no changes added to commit (use <span class="string">"git add"</span> and/or <span class="string">"git commit -a"</span>)</span><br></pre></td></tr></table></figure>
-
-<p>比较单个文件时发现本地和版本库的文件模式不同。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ git diff webConsoleApp/manage.py</span><br><span class="line">diff --git a/webConsoleApp/manage.py b/webConsoleApp/manage.py</span><br><span class="line">old mode 100755</span><br><span class="line">new mode 100644</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ ls -l webConsoleApp/manage.py</span><br><span class="line">-rwxr-xr-x 1 Eric 197121 654 六月    7 15:57 webConsoleApp/manage.py*</span><br></pre></td></tr></table></figure>
-
-<p>解决方法：Git有个配置项core.filemode，值为true时Git会比较文件模式，为false时忽略文件模式。只要将全局配置项设为false，并删除项目配置项即可。<strong>注意：项目配置项如果为true，会覆盖全局配置项false，造成改动不生效。</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global core.filemode <span class="literal">false</span></span><br><span class="line">$ git config --<span class="built_in">unset</span> core.filemode</span><br></pre></td></tr></table></figure>
-
-<p>现在本地文件和版本库状态一致了</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ git status</span><br><span class="line">On branch dev</span><br><span class="line">Your branch is up to date with <span class="string">'origin/dev'</span>.</span><br><span class="line"></span><br><span class="line">nothing to commit, working tree clean</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>扩展知识</p>
-<p>Git中平时用到的有三种配置文件：系统，全局，项目 </p>
-<p>system: {安装目录}/etc/gitconfig</p>
-<p>global: {用户目录}/.gitconfig</p>
-<p>repository: {项目目录}/.git/config</p>
-</li>
-</ol>
-
-      
+配置
+1lo...</p>
     </div>
-
-    
-    
-    
-
-    <div>
-    </div>
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/06/Python%E7%BA%BF%E7%A8%8B%E6%B1%A0/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/author.jpg">
-      <meta itemprop="name" content="萝卜">
-      <meta itemprop="description" content="直到这一刻微笑着说话为止,我至少流下了一公升眼泪">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="萝卜头の技术博客">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/06/06/Python%E7%BA%BF%E7%A8%8B%E6%B1%A0/" class="post-title-link" itemprop="url">Python线程池</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2020-06-06 15:36:55 / 修改时间：18:31:51" itemprop="dateCreated datePublished" datetime="2020-06-06T15:36:55+08:00">2020-06-06</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <blockquote>
-<p>从Python3.2开始，标准库为我们提供了 concurrent.futures 模块，它提供了 ThreadPoolExecutor (线程池)和ProcessPoolExecutor (进程池)两个类。</p>
-</blockquote>
-<ol>
-<li><p>导入</p>
-<p><code>from concurrent.futures import ThreadPoolExecutor, as_completed</code></p>
-</li>
-<li><p>可以通过实例化或者with语句创建线程池对象</p>
-<p><code>executor = ThreadPoolExecutor(max_workers=5)</code></p>
-<p><code>with ThreadPoolExecutor(max_workers=5) as executor:</code></p>
-</li>
-<li><p>定义子线程任务函数</p>
-<p>示例中的任务函数传入两个参数，子线程睡眠一定时间后，返回结果</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">do_task</span><span class="params">(id, secs)</span>:</span></span><br><span class="line">	time.sleep(secs)</span><br><span class="line">	result = random.choice([<span class="literal">True</span>, <span class="literal">False</span>])</span><br><span class="line">	<span class="keyword">return</span> &#123;<span class="string">'id'</span>: id, <span class="string">'secs'</span>: secs, <span class="string">'result'</span>: result&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>调度子线程执行任务，返回异步任务对象</p>
-<p><code>future = executor.submit(do_task, 1, 2.0)</code></p>
-<p>业务中通常调度一系列子线程异步执行各自的任务</p>
-<p><code>future_list = [executor.submit(do_task, i, random.uniform(1,3)) for i in range(10)]</code></p>
-<p>或者:</p>
-<p><code>future_dict = {executor.submit(do_task, i, random.uniform(1,3)): i} for i in range(10)}</code></p>
-</li>
-<li><p>迭代器获得子线程结束（完成或取消）的返回结果</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> future <span class="keyword">in</span> as_completed(future_list):  <span class="comment"># 或者future_dict</span></span><br><span class="line">    print(<span class="string">'Completed: %s'</span> % future.result())</span><br></pre></td></tr></table></figure>
-
-<p><strong>注意：先结束的子线程先返回结果给主线程</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">Completed: &#123;<span class="string">'id'</span>: <span class="number">0</span>, <span class="string">'secs'</span>: <span class="number">1.5608486616390314</span>, <span class="string">'result'</span>: <span class="literal">False</span>&#125;</span><br><span class="line">Completed: &#123;<span class="string">'id'</span>: <span class="number">4</span>, <span class="string">'secs'</span>: <span class="number">1.6426260705389957</span>, <span class="string">'result'</span>: <span class="literal">False</span>&#125;</span><br><span class="line">Completed: &#123;<span class="string">'id'</span>: <span class="number">1</span>, <span class="string">'secs'</span>: <span class="number">2.038432620949698</span>, <span class="string">'result'</span>: <span class="literal">True</span>&#125;</span><br><span class="line">Completed: &#123;<span class="string">'id'</span>: <span class="number">3</span>, <span class="string">'secs'</span>: <span class="number">2.3243230103530848</span>, <span class="string">'result'</span>: <span class="literal">False</span>&#125;</span><br><span class="line">Completed: &#123;<span class="string">'id'</span>: <span class="number">2</span>, <span class="string">'secs'</span>: <span class="number">2.736887875199857</span>, <span class="string">'result'</span>: <span class="literal">True</span>&#125;</span><br><span class="line">Completed: &#123;<span class="string">'id'</span>: <span class="number">7</span>, <span class="string">'secs'</span>: <span class="number">1.5087608298764041</span>, <span class="string">'result'</span>: <span class="literal">False</span>&#125;</span><br><span class="line">Completed: &#123;<span class="string">'id'</span>: <span class="number">5</span>, <span class="string">'secs'</span>: <span class="number">2.5807059758587423</span>, <span class="string">'result'</span>: <span class="literal">False</span>&#125;</span><br><span class="line">Completed: &#123;<span class="string">'id'</span>: <span class="number">6</span>, <span class="string">'secs'</span>: <span class="number">2.60630142126848</span>, <span class="string">'result'</span>: <span class="literal">True</span>&#125;</span><br><span class="line">Completed: &#123;<span class="string">'id'</span>: <span class="number">8</span>, <span class="string">'secs'</span>: <span class="number">2.1503349842456174</span>, <span class="string">'result'</span>: <span class="literal">True</span>&#125;</span><br><span class="line">Completed: &#123;<span class="string">'id'</span>: <span class="number">9</span>, <span class="string">'secs'</span>: <span class="number">1.968090306874622</span>, <span class="string">'result'</span>: <span class="literal">False</span>&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>还可以不使用submit和as_completed, 使用map调度子线程并获得返回结果</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> result <span class="keyword">in</span> executor.map(do_task, [x <span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">10</span>)], [random.uniform(<span class="number">1</span>, <span class="number">3</span>) <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">10</span>)]):</span><br><span class="line">    print(<span class="string">'Completed: %s'</span> % result)</span><br></pre></td></tr></table></figure>
-
-<p><strong>注意：先调度的子线程先返回结果给主线程</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">Completed: &#123;<span class="string">'id'</span>: <span class="number">0</span>, <span class="string">'secs'</span>: <span class="number">1.9061398293264586</span>, <span class="string">'result'</span>: <span class="literal">False</span>&#125;</span><br><span class="line">Completed: &#123;<span class="string">'id'</span>: <span class="number">1</span>, <span class="string">'secs'</span>: <span class="number">2.9305776496885168</span>, <span class="string">'result'</span>: <span class="literal">False</span>&#125;</span><br><span class="line">Completed: &#123;<span class="string">'id'</span>: <span class="number">2</span>, <span class="string">'secs'</span>: <span class="number">2.514969933731745</span>, <span class="string">'result'</span>: <span class="literal">True</span>&#125;</span><br><span class="line">Completed: &#123;<span class="string">'id'</span>: <span class="number">3</span>, <span class="string">'secs'</span>: <span class="number">2.7377424330538136</span>, <span class="string">'result'</span>: <span class="literal">True</span>&#125;</span><br><span class="line">Completed: &#123;<span class="string">'id'</span>: <span class="number">4</span>, <span class="string">'secs'</span>: <span class="number">2.561764634635858</span>, <span class="string">'result'</span>: <span class="literal">True</span>&#125;</span><br><span class="line">Completed: &#123;<span class="string">'id'</span>: <span class="number">5</span>, <span class="string">'secs'</span>: <span class="number">2.6653369852060553</span>, <span class="string">'result'</span>: <span class="literal">True</span>&#125;</span><br><span class="line">Completed: &#123;<span class="string">'id'</span>: <span class="number">6</span>, <span class="string">'secs'</span>: <span class="number">1.8654655536990747</span>, <span class="string">'result'</span>: <span class="literal">True</span>&#125;</span><br><span class="line">Completed: &#123;<span class="string">'id'</span>: <span class="number">7</span>, <span class="string">'secs'</span>: <span class="number">1.848664412270811</span>, <span class="string">'result'</span>: <span class="literal">True</span>&#125;</span><br><span class="line">Completed: &#123;<span class="string">'id'</span>: <span class="number">8</span>, <span class="string">'secs'</span>: <span class="number">1.566413445581289</span>, <span class="string">'result'</span>: <span class="literal">True</span>&#125;</span><br><span class="line">Completed: &#123;<span class="string">'id'</span>: <span class="number">9</span>, <span class="string">'secs'</span>: <span class="number">1.0898932318233148</span>, <span class="string">'result'</span>: <span class="literal">True</span>&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>完整示例</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> concurrent.futures <span class="keyword">import</span> ThreadPoolExecutor, as_completed</span><br><span class="line"><span class="keyword">import</span> time, random</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">do_task</span><span class="params">(id, secs)</span>:</span></span><br><span class="line">    time.sleep(secs)</span><br><span class="line">    result = random.choice([<span class="literal">True</span>, <span class="literal">False</span>])</span><br><span class="line">    <span class="keyword">return</span> &#123;<span class="string">'id'</span>: id, <span class="string">'secs'</span>: secs, <span class="string">'result'</span>: result&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">with</span> ThreadPoolExecutor(max_workers=<span class="number">5</span>) <span class="keyword">as</span> executor:</span><br><span class="line">    future_list = [executor.submit(do_task, i, random.uniform(<span class="number">1</span>,<span class="number">3</span>)) <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">10</span>)]</span><br><span class="line">    <span class="keyword">for</span> future <span class="keyword">in</span> as_completed(future_list):</span><br><span class="line">        print(<span class="string">'Completed: %s'</span> % future.result())</span><br></pre></td></tr></table></figure>
-
-
-
-</li>
-</ol>
-
-      
-    </div>
-
-    
-    
-    
-
-    <div>
-    </div>
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/03/Python%E4%BD%BF%E7%94%A8logger%E6%89%93%E5%8D%B0%E7%A8%8B%E5%BA%8F%E8%BF%90%E8%A1%8C%E6%97%B6%E9%97%B4/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/author.jpg">
-      <meta itemprop="name" content="萝卜">
-      <meta itemprop="description" content="直到这一刻微笑着说话为止,我至少流下了一公升眼泪">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="萝卜头の技术博客">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/06/03/Python%E4%BD%BF%E7%94%A8logger%E6%89%93%E5%8D%B0%E7%A8%8B%E5%BA%8F%E8%BF%90%E8%A1%8C%E6%97%B6%E9%97%B4/" class="post-title-link" itemprop="url">Python使用logger打印程序运行时间</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-06-03 23:08:00" itemprop="dateCreated datePublished" datetime="2020-06-03T23:08:00+08:00">2020-06-03</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-06-04 01:16:02" itemprop="dateModified" datetime="2020-06-04T01:16:02+08:00">2020-06-04</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <blockquote>
-<p>Python中可以通过导入logging模块和time模块打印程序运行时间</p>
-</blockquote>
-<ol>
-<li><p>logging模块</p>
-<ul>
-<li><p>导入</p>
-<p><code>import logging</code></p>
-</li>
-<li><p>配置</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">logging.basicConfig(level=logging.DEBUG, format=<span class="string">'[%(asctime)s %(filename)s func:%(funcName)s line:%(lineno)d %(threadName)s %(levelname)s] %(message)s'</span>)</span><br></pre></td></tr></table></figure>
-
-<p>可以选择很多消息级别，如debug、info、warning、error以及critical。通过赋予不同的消息级别，开发者就可以只输出错误信息到特定的日志文件，或者只在调试时输出调试信息。</p>
-<p>basicConfig函数各参数：</p>
-<p>filename：指定日志文件名</p>
-<p>filemode：和file函数意义相同，指定日志文件的打开模式，’w’或者’a’</p>
-<p>format：指定输出的格式和内容</p>
-<table>
-<thead>
-<tr>
-<th align="left">格式</th>
-<th align="left">说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">%(name)s</td>
-<td align="left">日志的名称</td>
-</tr>
-<tr>
-<td align="left">%(asctime)s</td>
-<td align="left">可读时间，默认格式‘2003-07-08 16:49:45,896’，逗号之后是毫秒</td>
-</tr>
-<tr>
-<td align="left">%(filename)s</td>
-<td align="left">文件名，pathname的一部分</td>
-</tr>
-<tr>
-<td align="left">%(pathname)s</td>
-<td align="left">文件的全路径名称</td>
-</tr>
-<tr>
-<td align="left">%(funcName)s</td>
-<td align="left">调用日志多对应的方法名</td>
-</tr>
-<tr>
-<td align="left">%(levelname)s</td>
-<td align="left">日志的等级</td>
-</tr>
-<tr>
-<td align="left">%(levelno)s</td>
-<td align="left">数字化的日志等级</td>
-</tr>
-<tr>
-<td align="left">%(lineno)d</td>
-<td align="left">被记录日志在源码中的行数</td>
-</tr>
-<tr>
-<td align="left">%(module)s</td>
-<td align="left">模块名</td>
-</tr>
-<tr>
-<td align="left">%(msecs)d</td>
-<td align="left">时间中的毫秒部分</td>
-</tr>
-<tr>
-<td align="left">%(process)d</td>
-<td align="left">进程的ID</td>
-</tr>
-<tr>
-<td align="left">%(processName)s</td>
-<td align="left">进程的名称</td>
-</tr>
-<tr>
-<td align="left">%(thread)d</td>
-<td align="left">线程的ID</td>
-</tr>
-<tr>
-<td align="left">%(threadName)s</td>
-<td align="left">线程的名称</td>
-</tr>
-<tr>
-<td align="left">%(relativeCreated)d</td>
-<td align="left">日志被创建的相对时间，以毫秒为单位</td>
-</tr>
-</tbody></table>
-<p>datefmt：指定时间格式，同time.strftime()</p>
-<p>level：设置日志级别，默认为logging.WARNNING</p>
-<table>
-<thead>
-<tr>
-<th>日志等级</th>
-<th>使用范围</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>FATAL</td>
-<td>致命错误</td>
-</tr>
-<tr>
-<td>CRITICAL</td>
-<td>特别糟糕的事情，如内存耗尽、磁盘空间为空，一般很少使用</td>
-</tr>
-<tr>
-<td>ERROR</td>
-<td>发生错误时，如IO操作失败或者连接问题</td>
-</tr>
-<tr>
-<td>WARNING</td>
-<td>发生很重要的事件，但是并不是错误时，如用户登录密码错误</td>
-</tr>
-<tr>
-<td>INFO</td>
-<td>处理请求或者状态变化等日常事务</td>
-</tr>
-<tr>
-<td>DEBUG</td>
-<td>调试过程中使用DEBUG等级，如算法中每个循环的中间状态</td>
-</tr>
-</tbody></table>
-<p>stream：指定将日志的输出流，可以指定输出到sys.stderr，sys.stdout或者文件，默认输出到sys.stderr，当stream和filename同时指定时，stream被忽略</p>
-</li>
-<li><p>通过logging.getLogger(name)来实例化，如果name不给定就用root。名字是以点号分割的命名方式命名的(a.b.c)。对同一个名字多次调用logging.getLogger()方法会返回同一个logger对象。这种命名方式下，后面的logger是前面logger的子logger，自动继承父logger的log信息。</p>
-<p><code>logger = logging.getLogger(__name__)</code></p>
-</li>
-<li><p>程序中打印日志</p>
-<p><code>logger.debug(&#39;output debug message&#39;)</code></p>
-<p><code>logger.info(&#39;output info message&#39;)</code></p>
-<p><code>logger.warning(&#39;output warning message&#39;)</code></p>
-<p><code>logger.error(&#39;output error message&#39;)</code></p>
-<p><code>logger.exception(&#39;trackback exception&#39;)</code></p>
-<blockquote>
-<p>logging.error和logging.exception这两个方法只有一个区别, loging.error只是记录一个日志消息, 而exception在记录消息的同时,  默认会记录错误发生的traceback信息, 所以说, 如果你想记录更详细的错误信息, 最好是使用exception,  但是error方法也可以输出traceback信息, 只需要设置一个参数。</p>
-<p><code>logger.error(&#39;traceback error message&#39;, exc_info=True)</code></p>
-</blockquote>
-</li>
-</ul>
-</li>
-<li><p>time模块</p>
-<ul>
-<li><p>导入</p>
-<p><code>import time</code></p>
-</li>
-<li><p>返回当前时间的时间戳(1970年纪元后经过的浮点秒数)</p>
-<p><code>secs = time.time()</code></p>
-</li>
-<li><p>转换时间戳为本地时间元组。 如果seconds参数未传入，则转换当前时间。</p>
-<p><code>local = time.localtime(secs)</code></p>
-</li>
-<li><p>转换时间元组为可读字符串，格式由参数format决定。如时间元组未指定，则转换localtime()返回的当前时间。</p>
-<p><code>time.strftime(&quot;%Y-%m-%d %H:%M:%S&quot;, local)</code></p>
-<table>
-<thead>
-<tr>
-<th>格式</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>%y</td>
-<td>两位数的年份表示（00-99）</td>
-</tr>
-<tr>
-<td>%Y</td>
-<td>四位数的年份表示（000-9999）</td>
-</tr>
-<tr>
-<td>%m</td>
-<td>月份（01-12）</td>
-</tr>
-<tr>
-<td>%d</td>
-<td>月内中的一天（0-31）</td>
-</tr>
-<tr>
-<td>%H</td>
-<td>24小时制小时数（0-23）</td>
-</tr>
-<tr>
-<td>%I</td>
-<td>12小时制小时数（01-12）</td>
-</tr>
-<tr>
-<td>%M</td>
-<td>分钟数（00=59）</td>
-</tr>
-<tr>
-<td>%S</td>
-<td>秒（00-59）</td>
-</tr>
-<tr>
-<td>%a</td>
-<td>本地简化星期名称</td>
-</tr>
-<tr>
-<td>%A</td>
-<td>本地完整星期名称</td>
-</tr>
-<tr>
-<td>%b</td>
-<td>本地简化的月份名称</td>
-</tr>
-<tr>
-<td>%B</td>
-<td>本地完整的月份名称</td>
-</tr>
-<tr>
-<td>%c</td>
-<td>本地相应的日期表示和时间表示</td>
-</tr>
-<tr>
-<td>%j</td>
-<td>年内的一天（001-366）</td>
-</tr>
-<tr>
-<td>%p</td>
-<td>本地A.M.或P.M.的等价符</td>
-</tr>
-<tr>
-<td>%U</td>
-<td>一年中的星期数（00-53）星期天为星期的开始</td>
-</tr>
-<tr>
-<td>%w</td>
-<td>星期（0-6），星期天为星期的开始</td>
-</tr>
-<tr>
-<td>%W</td>
-<td>一年中的星期数（00-53）星期一为星期的开始</td>
-</tr>
-<tr>
-<td>%x</td>
-<td>本地相应的日期表示</td>
-</tr>
-<tr>
-<td>%X</td>
-<td>本地相应的时间表示</td>
-</tr>
-<tr>
-<td>%Z</td>
-<td>当前时区的名称</td>
-</tr>
-<tr>
-<td>%%</td>
-<td>%号本身</td>
-</tr>
-</tbody></table>
-</li>
-</ul>
-</li>
-<li><p>示例</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> logging</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_local_time</span><span class="params">(secs)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> time.strftime(<span class="string">"%Y-%m-%d %H:%M:%S"</span>, time.localtime(secs))</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_elapsed_time</span><span class="params">(start, end)</span>:</span></span><br><span class="line">    elapse = end - start</span><br><span class="line">    <span class="keyword">return</span> <span class="string">"%d mins %d secs"</span> % (elapse/<span class="number">60</span>, elapse%<span class="number">60</span>)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">demo</span><span class="params">()</span>:</span></span><br><span class="line">    logging.basicConfig(level=logging.DEBUG, format=<span class="string">'[%(asctime)s %(filename)s func:%(funcName)s line:%(lineno)d %(threadName)s %(levelname)s] %(message)s'</span>)</span><br><span class="line">    logger = logging.getLogger(__name__)</span><br><span class="line">    start = time.time()</span><br><span class="line">    logger.debug(<span class="string">'start time: %s'</span> % get_local_time(start))</span><br><span class="line">    time.sleep(<span class="number">128</span>)</span><br><span class="line">    end = time.time()</span><br><span class="line">    logger.debug(<span class="string">'end time: %s'</span> % get_local_time(end))</span><br><span class="line">    logger.info(<span class="string">'elapsed time: %s'</span> % get_elapsed_time(start, end))</span><br><span class="line">    </span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    demo()</span><br></pre></td></tr></table></figure>
-
-<p>执行结果：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[2020-06-04 00:57:05,376 threadapp.py func:demo line:18 MainThread DEBUG] start time: 2020-06-04 00:57:05</span><br><span class="line">[2020-06-04 00:59:13,477 threadapp.py func:demo line:21 MainThread DEBUG] end time: 2020-06-04 00:59:13</span><br><span class="line">[2020-06-04 00:59:13,478 threadapp.py func:demo line:22 MainThread INFO] elapsed time: 2 mins 8 secs</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-
-
-
-
-
-
-
-
-</li>
-</ol>
-
-      
-    </div>
-
-    
-    
-    
-
-    <div>
-    </div>
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/05/27/Ubuntu%E6%90%AD%E5%BB%BAHexo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/author.jpg">
-      <meta itemprop="name" content="萝卜">
-      <meta itemprop="description" content="直到这一刻微笑着说话为止,我至少流下了一公升眼泪">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="萝卜头の技术博客">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/05/27/Ubuntu%E6%90%AD%E5%BB%BAHexo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" class="post-title-link" itemprop="url">Ubuntu搭建Hexo个人博客</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-05-27 23:53:18" itemprop="dateCreated datePublished" datetime="2020-05-27T23:53:18+08:00">2020-05-27</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-05-31 13:06:16" itemprop="dateModified" datetime="2020-05-31T13:06:16+08:00">2020-05-31</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Web/" itemprop="url" rel="index"><span itemprop="name">Web</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <ul>
-<li><p>安装git</p>
-<p><code>sudo apt-get install git</code></p>
-</li>
-<li><p><a href="https://nodejs.org/" target="_blank" rel="noopener">Node.js官网</a>下载Linux Binaries (x64)安装包</p>
-<p><code>node-v12.17.0-linux-x64.tar.xz</code></p>
-</li>
-<li><p>将安装包解压到指定目录</p>
-<p><code>sudo tar xJvf node-v12.17.0-linux-x64.tar.xz -C /usr/local/bin/</code></p>
-</li>
-<li><p>创建软链接</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /usr/<span class="built_in">local</span>/bin/</span><br><span class="line">sudo ln -s node-v12.17.0-linux-x64/bin/node ./node</span><br><span class="line">sudo ln -s node-v12.17.0-linux-x64/bin/npm ./npm</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>确保”/usr/local/bin/“在PATH路径中</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="variable">$PATH</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/home/eric/.pyenv/plugins/pyenv-virtualenv/shims:/home/eric/.pyenv/shims:/home/eric/.pyenv/bin:/home/eric/bin:/home/eric/.<span class="built_in">local</span>/bin:/usr/<span class="built_in">local</span>/sbin:**/usr/<span class="built_in">local</span>/bin**:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/<span class="built_in">local</span>/games:/snap/bin</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>在用户目录中查看node及npm版本</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~</span><br><span class="line">node -v</span><br><span class="line">v12.17.0</span><br><span class="line">npm -v</span><br><span class="line">6.14.4</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>安装Hexo</p>
-<p><code>sudo npm install hexo-cli -g</code></p>
-</li>
-<li><p>创建并初始化blog目录</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo init blog</span><br><span class="line"><span class="built_in">cd</span> blog</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>写文章生成网页本地预览</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">hexo new <span class="string">"title"</span></span><br><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
-
-<h6 id="gt-INFO-Hexo-is-running-at-http-localhost-4000-Press-Ctrl-C-to-stop"><a href="#gt-INFO-Hexo-is-running-at-http-localhost-4000-Press-Ctrl-C-to-stop" class="headerlink" title="&gt; INFO  Hexo is running at http://localhost:4000 . Press Ctrl+C to stop."></a>&gt; <em>INFO  Hexo is running at <a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a> . Press Ctrl+C to stop.</em></h6></li>
-<li><p>安装hexo部署插件</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> blog</span><br><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>配置_config.yml部署参数</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">'git'</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">https://github.com/pastoria/pastoria.github.io</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">master</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>部署到GitHub Pages</p>
-<p><code>hexo d</code></p>
-<h6 id="gt-更新文章并部署网站的快捷命令：hexo-g-d-或者-hexo-d-g"><a href="#gt-更新文章并部署网站的快捷命令：hexo-g-d-或者-hexo-d-g" class="headerlink" title="&gt; 更新文章并部署网站的快捷命令：hexo g -d 或者 hexo d -g"></a>&gt; <em>更新文章并部署网站的快捷命令：hexo g -d 或者 hexo d -g</em></h6></li>
-</ul>
-
-      
-    </div>
-
-    
-    
-    
-
-    <div>
-    </div>
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/05/27/Linux%E8%A7%A3%E5%8E%8B%E5%8E%8B%E7%BC%A9%E6%96%87%E4%BB%B6%E5%91%BD%E4%BB%A4/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/author.jpg">
-      <meta itemprop="name" content="萝卜">
-      <meta itemprop="description" content="直到这一刻微笑着说话为止,我至少流下了一公升眼泪">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="萝卜头の技术博客">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/05/27/Linux%E8%A7%A3%E5%8E%8B%E5%8E%8B%E7%BC%A9%E6%96%87%E4%BB%B6%E5%91%BD%E4%BB%A4/" class="post-title-link" itemprop="url">Linux解压压缩文件命令</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-05-27 20:59:55" itemprop="dateCreated datePublished" datetime="2020-05-27T20:59:55+08:00">2020-05-27</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-05-30 22:21:28" itemprop="dateModified" datetime="2020-05-30T22:21:28+08:00">2020-05-30</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Linux/" itemprop="url" rel="index"><span itemprop="name">Linux</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <ul>
-<li><p>解压tar.gz</p>
-<p><code>sudo tar xzvf openvpn-2.4.8.tar.gz -C /usr/local/bin/</code></p>
-</li>
-<li><p>解压tar.xz</p>
-<p><code>sudo tar xJvf node-v12.17.0-linux-x64.tar.xz -C /usr/local/bin/</code></p>
-</li>
-<li><p>解压tar.bz2</p>
-<p><code>sudo tar xjvf openvpn-2.4.8.tar.bz2 -C /usr/local/bin/</code></p>
-</li>
-<li><p>解压zip</p>
-<p><code>unzip -d ~/Documents git-recipes-master.zip</code></p>
-</li>
-</ul>
-
-      
-    </div>
-
-    
-    
-    
-
-    <div>
-    </div>
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/05/27/Ubuntu%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85vim%E6%94%AF%E6%8C%81%E7%B3%BB%E7%BB%9F%E5%89%AA%E8%B4%B4%E6%9D%BF/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/author.jpg">
-      <meta itemprop="name" content="萝卜">
-      <meta itemprop="description" content="直到这一刻微笑着说话为止,我至少流下了一公升眼泪">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="萝卜头の技术博客">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/05/27/Ubuntu%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85vim%E6%94%AF%E6%8C%81%E7%B3%BB%E7%BB%9F%E5%89%AA%E8%B4%B4%E6%9D%BF/" class="post-title-link" itemprop="url">Ubuntu环境安装vim支持系统剪贴板</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-05-27 20:59:55" itemprop="dateCreated datePublished" datetime="2020-05-27T20:59:55+08:00">2020-05-27</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-05-30 22:07:41" itemprop="dateModified" datetime="2020-05-30T22:07:41+08:00">2020-05-30</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Linux/" itemprop="url" rel="index"><span itemprop="name">Linux</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <ul>
-<li><p>Ubuntu自带vim不支持复制粘贴系统剪贴板，需要安装vim插件</p>
-<p><code>sudo apt-get install vim-gtk vim-scripts vim-gnome</code></p>
-</li>
-<li><p>查看安装好的vim插件</p>
-<p><code>dpkg -l vim*</code></p>
-<p><img src="/images/image-20200526205536519.png" alt="image-20200526205536519"></p>
-</li>
-<li><p>查看vim是否支持系统剪贴板</p>
-<p><code>vim --version | grep clipboard</code></p>
-<p><img src="/images/image-20200526205807433.png" alt="image-20200526205807433"></p>
-<blockquote>
-<p><strong>xterm_clipboard前面+表示支持系统剪贴板，-表示不支持</strong></p>
-</blockquote>
-</li>
-<li><p>在vim中使用系统剪贴板复制粘贴文字</p>
-<ul>
-<li>复制    <code>&quot;+y</code></li>
-<li>粘贴    <code>&quot;+p</code></li>
-</ul>
-</li>
-</ul>
-
-      
-    </div>
-
-    
-    
-    
-
-    <div>
-    </div>
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/05/27/Ubuntu%E7%8E%AF%E5%A2%83%E8%AE%BE%E7%BD%AE%E5%91%BD%E4%BB%A4%E5%88%AB%E5%90%8D/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/author.jpg">
-      <meta itemprop="name" content="萝卜">
-      <meta itemprop="description" content="直到这一刻微笑着说话为止,我至少流下了一公升眼泪">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="萝卜头の技术博客">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/05/27/Ubuntu%E7%8E%AF%E5%A2%83%E8%AE%BE%E7%BD%AE%E5%91%BD%E4%BB%A4%E5%88%AB%E5%90%8D/" class="post-title-link" itemprop="url">Ubuntu环境设置命令别名</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-05-27 20:59:55" itemprop="dateCreated datePublished" datetime="2020-05-27T20:59:55+08:00">2020-05-27</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-05-30 21:49:14" itemprop="dateModified" datetime="2020-05-30T21:49:14+08:00">2020-05-30</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Linux/" itemprop="url" rel="index"><span itemprop="name">Linux</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <ol>
-<li>打开~/.bashrc文件</li>
-</ol>
-<p>​        <code>vi ~/.bashrc</code></p>
-<ol start="2">
-<li><p>在文件末尾增加以下内容</p>
- <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># add custom alias</span></span><br><span class="line"><span class="built_in">alias</span> jc=<span class="string">'cd ~/PycharmProjects/Bitbucket/cisco-web-console/'</span></span><br><span class="line"><span class="built_in">alias</span> ji=<span class="string">'cd ~/PycharmProjects/Bitbucket/imeisearchtool/'</span></span><br><span class="line"><span class="built_in">alias</span> js=<span class="string">'cd ~/PycharmProjects/Bitbucket/ssh\ live/'</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>保存并退出</p>
-<p> <code>:wq</code></p>
-</li>
-<li><p>执行~/.bashrc文件使新配置生效</p>
-<p> <code>source ~/.bashrc</code></p>
-</li>
-</ol>
-
-      
-    </div>
-
-    
-    
-    
-
-    <div>
-    </div>
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/05/27/%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%8F%91%E9%80%81HTTP%E8%AF%B7%E6%B1%82%E4%B8%A4%E7%A7%8D%E6%96%B9%E5%BC%8F/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/author.jpg">
-      <meta itemprop="name" content="萝卜">
-      <meta itemprop="description" content="直到这一刻微笑着说话为止,我至少流下了一公升眼泪">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="萝卜头の技术博客">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/05/27/%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%8F%91%E9%80%81HTTP%E8%AF%B7%E6%B1%82%E4%B8%A4%E7%A7%8D%E6%96%B9%E5%BC%8F/" class="post-title-link" itemprop="url">客户端发送HTTP请求两种方式</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-05-27 20:59:55" itemprop="dateCreated datePublished" datetime="2020-05-27T20:59:55+08:00">2020-05-27</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-05-30 22:16:35" itemprop="dateModified" datetime="2020-05-30T22:16:35+08:00">2020-05-30</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Web/" itemprop="url" rel="index"><span itemprop="name">Web</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="1-GET-Method"><a href="#1-GET-Method" class="headerlink" title="1. GET Method"></a>1. GET Method</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -i -X GET -u cmc:cmc1234! <span class="string">"http://54.169.119.156/cmc/cisco_whitelist_1_1/?filter=%7B'uuid':'111111111'%7D"</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">requests.get(url=<span class="string">'http://54.169.119.156/cmc/cisco_whitelist_1_1'</span>, auth=(<span class="string">'cmc'</span>, <span class="string">'cmc1234!'</span>), params=&#123;<span class="string">'filter'</span>: json.dumps(&#123;<span class="string">'uuid'</span>: <span class="string">'111111111'</span>&#125;)&#125;)</span><br></pre></td></tr></table></figure>
-<h2 id="2-POST-method"><a href="#2-POST-method" class="headerlink" title="2. POST method"></a>2. POST method</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -i -X POST -u cmc:cmc1234! -H <span class="string">"Content-Type: application/json"</span> -d <span class="string">"&#123;'uuid':'111111111'&#125;"</span> http://54.169.119.156/cmc/cisco_whitelist_1_1</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">requests.post(url=<span class="string">'http://54.169.119.156/cmc/cisco_whitelist_1_1'</span>, auth=(<span class="string">'cmc'</span>, <span class="string">'cmc1234!'</span>), data=<span class="string">"&#123;'uuid': '111111111'&#125;"</span>, headers=&#123;<span class="string">"Content-Type"</span>: <span class="string">"application/json"</span>&#125;)</span><br></pre></td></tr></table></figure>
-
-
-
-      
-    </div>
-
-    
-    
-    
-
-    <div>
-    </div>
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/05/27/Ajax%E4%BC%A0%E8%BE%93%E6%95%B0%E6%8D%AE%E4%B8%A4%E7%A7%8D%E5%B8%B8%E7%94%A8%E6%96%B9%E5%BC%8F/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/author.jpg">
-      <meta itemprop="name" content="萝卜">
-      <meta itemprop="description" content="直到这一刻微笑着说话为止,我至少流下了一公升眼泪">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="萝卜头の技术博客">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/05/27/Ajax%E4%BC%A0%E8%BE%93%E6%95%B0%E6%8D%AE%E4%B8%A4%E7%A7%8D%E5%B8%B8%E7%94%A8%E6%96%B9%E5%BC%8F/" class="post-title-link" itemprop="url">Ajax传输数据两种常用方式</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-05-27 20:59:55" itemprop="dateCreated datePublished" datetime="2020-05-27T20:59:55+08:00">2020-05-27</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-05-30 22:15:31" itemprop="dateModified" datetime="2020-05-30T22:15:31+08:00">2020-05-30</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Web/" itemprop="url" rel="index"><span itemprop="name">Web</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="1-“application-x-www-form-urlencoded”"><a href="#1-“application-x-www-form-urlencoded”" class="headerlink" title="1. “application/x-www-form-urlencoded”"></a>1. “application/x-www-form-urlencoded”</h2><h3 id="Javascript"><a href="#Javascript" class="headerlink" title="Javascript"></a>Javascript</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> cid = <span class="number">5</span>;</span><br><span class="line"><span class="keyword">var</span> obj = <span class="string">'&#123;"cisco_whitelist_5_4": "nanjing"&#125;'</span>;</span><br><span class="line">$.ajax(&#123;</span><br><span class="line">    url: <span class="string">"/serialnumberconsole/download/"</span>,</span><br><span class="line">    type: <span class="string">'POST'</span>,</span><br><span class="line">    <span class="keyword">async</span>: <span class="literal">true</span>,</span><br><span class="line">    data: &#123;<span class="string">"cid"</span>: cid, <span class="string">"obj"</span>: <span class="built_in">JSON</span>.stringify(obj)&#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<h3 id="Python"><a href="#Python" class="headerlink" title="Python"></a>Python</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> request.method == <span class="string">'POST'</span>:</span><br><span class="line">    cid = int(request.POST.get(<span class="string">'cid'</span>, <span class="string">'-1'</span>))</span><br><span class="line">    obj = request.POST.get(<span class="string">'obj'</span>, <span class="literal">None</span>)</span><br><span class="line">    data = json.loads(obj)</span><br><span class="line">    body = request.body</span><br></pre></td></tr></table></figure>
-<h3 id="Result"><a href="#Result" class="headerlink" title="Result"></a>Result</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cid &#x3D; &#123;int&#125; 5</span><br><span class="line">obj &#x3D; &#123;str&#125; &#39;&#123;&quot;cisco_whitelist_5_4&quot;:&quot;nanjing&quot;&#125;&#39;</span><br><span class="line">data &#x3D; &#123;dict&#125; &lt;class &#39;dict&#39;&gt;: &#123;&#39;cisco_whitelist_5_4&#39;: &#39;nanjing&#39;&#125;</span><br><span class="line">body &#x3D; &#123;bytes&#125; b&#39;cid&#x3D;5&amp;obj&#x3D;%7B%22cisco_whitelist_5_4%22%3A%22nanjing%22%7D&#39;</span><br></pre></td></tr></table></figure>
-
-<h2 id="2-“application-json”"><a href="#2-“application-json”" class="headerlink" title="2. “application/json”"></a>2. “application/json”</h2><h3 id="Javascript-1"><a href="#Javascript-1" class="headerlink" title="Javascript"></a>Javascript</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> cid = <span class="number">5</span>;</span><br><span class="line"><span class="keyword">var</span> obj = <span class="string">'&#123;"cisco_whitelist_5_4": "nanjing"&#125;'</span>;</span><br><span class="line">$.ajax(&#123;</span><br><span class="line">    url: <span class="string">"/serialnumberconsole/download/"</span>,</span><br><span class="line">    type: <span class="string">'POST'</span>,</span><br><span class="line">    <span class="keyword">async</span>: <span class="literal">true</span>,</span><br><span class="line">    data: <span class="built_in">JSON</span>.stringify(&#123;<span class="string">"cid"</span>: cid, <span class="string">"obj"</span>: obj&#125;),</span><br><span class="line">    contentType: <span class="string">"application/json"</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<h3 id="Python-1"><a href="#Python-1" class="headerlink" title="Python"></a>Python</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> request.method == <span class="string">'POST'</span>:</span><br><span class="line">    body = request.body</span><br><span class="line">    data = json.loads(body)</span><br></pre></td></tr></table></figure>
-<h3 id="Result-1"><a href="#Result-1" class="headerlink" title="Result"></a>Result</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">body &#x3D; &#123;bytes&#125; b&#39;&#123;&quot;cid&quot;:&quot;5&quot;,&quot;obj&quot;:&#123;&quot;cisco_whitelist_5_4&quot;:&quot;nanjing&quot;&#125;&#125;&#39;</span><br><span class="line">data &#x3D; &#123;dict&#125; &lt;class &#39;dict&#39;&gt;: &#123;&#39;cid&#39;: &#39;5&#39;, &#39;obj&#39;: &#123;&#39;cisco_whitelist_5_4&#39;: &#39;nanjing&#39;&#125;&#125;</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-
-    
-    
-    
-
-    <div>
-    </div>
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/05/27/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/author.jpg">
-      <meta itemprop="name" content="萝卜">
-      <meta itemprop="description" content="直到这一刻微笑着说话为止,我至少流下了一公升眼泪">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="萝卜头の技术博客">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/05/27/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-05-27 01:07:50" itemprop="dateCreated datePublished" datetime="2020-05-27T01:07:50+08:00">2020-05-27</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <div>
-    </div>
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-
-  
-
-
-
-          </div>
-          
-
-<script>
-  window.addEventListener('tabs:register', () => {
-    let { activeClass } = CONFIG.comments;
-    if (CONFIG.comments.storage) {
-      activeClass = localStorage.getItem('comments_active') || activeClass;
-    }
-    if (activeClass) {
-      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
-      if (activeTab) {
-        activeTab.click();
-      }
-    }
-  });
-  if (CONFIG.comments.storage) {
-    window.addEventListener('tabs:click', event => {
-      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      let commentClass = event.target.classList[1];
-      localStorage.setItem('comments_active', commentClass);
-    });
-  }
-</script>
-
-        </div>
-          
-  
-  <div class="toggle sidebar-toggle">
-    <span class="toggle-line toggle-line-first"></span>
-    <span class="toggle-line toggle-line-middle"></span>
-    <span class="toggle-line toggle-line-last"></span>
-  </div>
-
-  <aside class="sidebar">
-    <div class="sidebar-inner">
-
-      <ul class="sidebar-nav motion-element">
-        <li class="sidebar-nav-toc">
-          文章目录
-        </li>
-        <li class="sidebar-nav-overview">
-          站点概览
-        </li>
-      </ul>
-
-      <!--noindex-->
-      <div class="post-toc-wrap sidebar-panel">
-      </div>
-      <!--/noindex-->
-
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="萝卜"
-      src="/images/author.jpg">
-  <p class="site-author-name" itemprop="name">萝卜</p>
-  <div class="site-description" itemprop="description">直到这一刻微笑着说话为止,我至少流下了一公升眼泪</div>
-</div>
-<div class="site-state-wrap motion-element">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-          <a href="/archives/">
-        
-          <span class="site-state-item-count">10</span>
-          <span class="site-state-item-name">日志</span>
-        </a>
-      </div>
-      <div class="site-state-item site-state-categories">
-            <a href="/categories/">
-          
-        <span class="site-state-item-count">2</span>
-        <span class="site-state-item-name">分类</span></a>
-      </div>
-      <div class="site-state-item site-state-tags">
-            <a href="/tags/">
-          
-        <span class="site-state-item-count">3</span>
-        <span class="site-state-item-name">标签</span></a>
-      </div>
-  </nav>
-</div>
-  <div class="links-of-author motion-element">
-      <span class="links-of-author-item">
-        <a href="https://github.com/pastoria" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;pastoria" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="mailto:ericw628@gmail.com" title="E-Mail → mailto:ericw628@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
-      </span>
-  </div>
-
-
-  <div>
-    <iframe allow="autoplay" frameborder="no" border="0" marginwidth="0" marginheight="0" width=298 height=52 src="//music.163.com/outchain/player?type=2&id=1400229953&auto=1&height=32"></iframe>
-  </div>
-
-      </div>
-        <div class="back-to-top motion-element">
-          <i class="fa fa-arrow-up"></i>
-          <span>0%</span>
-        </div>
-    </div>
-  </aside>
-  <div id="sidebar-dimmer"></div>
-
-
-      </div>
-    </main>
-
-    <footer class="footer">
-      <div class="footer-inner">
-        
-
-        
-
-<div class="copyright">
-  
-  &copy; 
-  <span itemprop="copyrightYear">2020</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">萝卜</span>
-</div>
-  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
-  </div>
-
-        
-<div class="busuanzi-count">
-  <script data-pjax async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-user"></i>
-      </span>
-      <span class="site-uv" title="总访客量">
-        <span id="busuanzi_value_site_uv"></span>
-      </span>
-    </span>
-    <span class="post-meta-divider">|</span>
-    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-eye"></i>
-      </span>
-      <span class="site-pv" title="总访问量">
-        <span id="busuanzi_value_site_pv"></span>
-      </span>
-    </span>
 </div>
 
 
+<div class="post">
+    <a href="/2020/05/27/Ubuntu%E6%90%AD%E5%BB%BAHexo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" title="Ubuntu搭建Hexo个人博客">
+        <img src="/img/cover4.jpg" class="cover" width="680" height="440">
+    </a>
+    <div class="else">
+        <p>五月 27, 2020</p>
+        <h3><a href="/2020/05/27/Ubuntu%E6%90%AD%E5%BB%BAHexo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" title="Ubuntu搭建Hexo个人博客" class="posttitle">Ubuntu搭建Hexo个人博客</a></h3>
+        <p>
+安装git
+sudo apt-get install git
+
+Node.js官网下载Linux Binaries (x64)安装包
+node-v12....</p>
+    </div>
+</div>
 
 
+<div class="post">
+    <a href="/2020/05/27/Linux%E8%A7%A3%E5%8E%8B%E5%8E%8B%E7%BC%A9%E6%96%87%E4%BB%B6%E5%91%BD%E4%BB%A4/" title="Linux解压压缩文件命令">
+        <img src="/img/cover2.jpg" class="cover" width="680" height="440">
+    </a>
+    <div class="else">
+        <p>五月 27, 2020</p>
+        <h3><a href="/2020/05/27/Linux%E8%A7%A3%E5%8E%8B%E5%8E%8B%E7%BC%A9%E6%96%87%E4%BB%B6%E5%91%BD%E4%BB%A4/" title="Linux解压压缩文件命令" class="posttitle">Linux解压压缩文件命令</a></h3>
+        <p>
+解压tar.gz
+sudo tar xzvf openvpn-2.4.8.tar.gz -C /usr/local/bin/
+
+解压tar.xz
+sud...</p>
+    </div>
+</div>
 
 
+<div class="post">
+    <a href="/2020/05/27/Ubuntu%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85vim%E6%94%AF%E6%8C%81%E7%B3%BB%E7%BB%9F%E5%89%AA%E8%B4%B4%E6%9D%BF/" title="Ubuntu环境安装vim支持系统剪贴板">
+        <img src="/img/cover.jpg" class="cover" width="680" height="440">
+    </a>
+    <div class="else">
+        <p>五月 27, 2020</p>
+        <h3><a href="/2020/05/27/Ubuntu%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85vim%E6%94%AF%E6%8C%81%E7%B3%BB%E7%BB%9F%E5%89%AA%E8%B4%B4%E6%9D%BF/" title="Ubuntu环境安装vim支持系统剪贴板" class="posttitle">Ubuntu环境安装vim支持系统剪贴板</a></h3>
+        <p>
+Ubuntu自带vim不支持复制粘贴系统剪贴板，需要安装vim插件
+sudo apt-get install vim-gtk vim-scripts v...</p>
+    </div>
+</div>
 
 
-      </div>
-    </footer>
-  </div>
+<div class="post">
+    <a href="/2020/05/27/Ubuntu%E7%8E%AF%E5%A2%83%E8%AE%BE%E7%BD%AE%E5%91%BD%E4%BB%A4%E5%88%AB%E5%90%8D/" title="Ubuntu环境设置命令别名">
+        <img src="/img/cover3.jpg" class="cover" width="680" height="440">
+    </a>
+    <div class="else">
+        <p>五月 27, 2020</p>
+        <h3><a href="/2020/05/27/Ubuntu%E7%8E%AF%E5%A2%83%E8%AE%BE%E7%BD%AE%E5%91%BD%E4%BB%A4%E5%88%AB%E5%90%8D/" title="Ubuntu环境设置命令别名" class="posttitle">Ubuntu环境设置命令别名</a></h3>
+        <p>
+打开~/.bashrc文件
 
-  
-  <script src="/lib/anime.min.js"></script>
-  <script src="/lib/pjax/pjax.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js"></script>
-  <script src="/lib/velocity/velocity.ui.min.js"></script>
+​        vi ~/.bashrc
 
-<script src="/js/utils.js"></script>
-
-<script src="/js/motion.js"></script>
-
-
-<script src="/js/schemes/pisces.js"></script>
-
-
-<script src="/js/next-boot.js"></script>
-
-  <script>
-var pjax = new Pjax({
-  selectors: [
-    'head title',
-    '#page-configurations',
-    '.content-wrap',
-    '.post-toc-wrap',
-    '.languages',
-    '#pjax'
-  ],
-  switches: {
-    '.post-toc-wrap': Pjax.switches.innerHTML
-  },
-  analytics: false,
-  cacheBust: false,
-  scrollTo : !CONFIG.bookmark.enable
-});
-
-document.addEventListener('pjax:success', () => {
-  document.querySelectorAll('script[data-pjax], script#page-configurations, #pjax script').forEach(element => {
-    var code = element.text || element.textContent || element.innerHTML || '';
-    var parent = element.parentNode;
-    parent.removeChild(element);
-    var script = document.createElement('script');
-    if (element.id) {
-      script.id = element.id;
-    }
-    if (element.className) {
-      script.className = element.className;
-    }
-    if (element.type) {
-      script.type = element.type;
-    }
-    if (element.src) {
-      script.src = element.src;
-      // Force synchronous loading of peripheral JS.
-      script.async = false;
-    }
-    if (element.dataset.pjax !== undefined) {
-      script.dataset.pjax = '';
-    }
-    if (code !== '') {
-      script.appendChild(document.createTextNode(code));
-    }
-    parent.appendChild(script);
-  });
-  NexT.boot.refresh();
-  // Define Motion Sequence & Bootstrap Motion.
-  if (CONFIG.motion.enable) {
-    NexT.motion.integrator
-      .init()
-      .add(NexT.motion.middleWares.subMenu)
-      .add(NexT.motion.middleWares.postList)
-      .bootstrap();
-  }
-  NexT.utils.updateSidebarPosition();
-});
-</script>
+在文件末尾增加以下内容
+ 1234# add custom aliasali...</p>
+    </div>
+</div>
 
 
+<div class="post">
+    <a href="/2020/05/27/%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%8F%91%E9%80%81HTTP%E8%AF%B7%E6%B1%82%E4%B8%A4%E7%A7%8D%E6%96%B9%E5%BC%8F/" title="客户端发送HTTP请求两种方式">
+        <img src="/img/cover4.jpg" class="cover" width="680" height="440">
+    </a>
+    <div class="else">
+        <p>五月 27, 2020</p>
+        <h3><a href="/2020/05/27/%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%8F%91%E9%80%81HTTP%E8%AF%B7%E6%B1%82%E4%B8%A4%E7%A7%8D%E6%96%B9%E5%BC%8F/" title="客户端发送HTTP请求两种方式" class="posttitle">客户端发送HTTP请求两种方式</a></h3>
+        <p>1. GET Method1curl -i -X GET -u cmc:cmc1234! "http://54.169.119.156/cmc/cisco...</p>
+    </div>
+</div>
 
 
-  
+<div class="post">
+    <a href="/2020/05/27/Ajax%E4%BC%A0%E8%BE%93%E6%95%B0%E6%8D%AE%E4%B8%A4%E7%A7%8D%E5%B8%B8%E7%94%A8%E6%96%B9%E5%BC%8F/" title="Ajax传输数据两种常用方式">
+        <img src="/img/cover.jpg" class="cover" width="680" height="440">
+    </a>
+    <div class="else">
+        <p>五月 27, 2020</p>
+        <h3><a href="/2020/05/27/Ajax%E4%BC%A0%E8%BE%93%E6%95%B0%E6%8D%AE%E4%B8%A4%E7%A7%8D%E5%B8%B8%E7%94%A8%E6%96%B9%E5%BC%8F/" title="Ajax传输数据两种常用方式" class="posttitle">Ajax传输数据两种常用方式</a></h3>
+        <p>1. “application/x-www-form-urlencoded”Javascript12345678var cid = 5;var obj =...</p>
+    </div>
+</div>
 
 
+<div class="post">
+    <a href="/2020/05/27/hello-world/" title="Hello World">
+        <img src="/img/cover4.jpg" class="cover" width="680" height="440">
+    </a>
+    <div class="else">
+        <p>五月 27, 2020</p>
+        <h3><a href="/2020/05/27/hello-world/" title="Hello World" class="posttitle">Hello World</a></h3>
+        <p>Welcome to Hexo! This is your very first post. Check documentation for more i...</p>
+    </div>
+</div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-    <div id="pjax">
-  
-
-  
 
     </div>
+    
+</div>
+<div id="preview"></div>
+
+
+
 </body>
+
+
+<script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/typed.js"></script>
+<script src="/js/diaspora.js"></script>
+
+
+<link rel="stylesheet" href="/photoswipe/photoswipe.css">
+<link rel="stylesheet" href="/photoswipe/default-skin/default-skin.css">
+
+
+<script src="/photoswipe/photoswipe.min.js"></script>
+<script src="/photoswipe/photoswipe-ui-default.min.js"></script>
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
 </html>
