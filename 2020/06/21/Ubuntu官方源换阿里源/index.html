@@ -1,0 +1,397 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN" class="loading">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Ubuntu官方源换阿里源 - 萝卜头の技术博客</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate" />
+    <meta name="keywords" content="Fechin,"> 
+    <meta name="description" content="直到这一刻微笑着说话为止,我至少流下了一公升眼泪,
+由于国内访问 Ubuntu 官方源速度慢，故将本机替换为阿里源。
+
+
+首先了解下 Ubuntu 发行版的版本和代号。Ubuntu 发布版本的官方名称是 “Ubuntu X.YY”，其中 X 表示年,"> 
+    <meta name="author" content="萝卜"> 
+    <link rel="alternative" href="atom.xml" title="萝卜头の技术博客" type="application/atom+xml"> 
+    <link rel="icon" href="/img/favicon.png"> 
+    
+    
+<link rel="stylesheet" href="/css/diaspora.css">
+
+	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({
+              google_ad_client: "ca-pub-8691406134231910",
+              enable_page_level_ads: true
+         });
+    </script>
+    <script async custom-element="amp-auto-ads"
+        src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
+    </script>
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body class="loading">
+    <span id="config-title" style="display:none">萝卜头の技术博客</span>
+    <div id="loader"></div>
+    <div id="single">
+    <div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <a class="iconfont icon-home image-icon" href="javascript:;" data-url="http://yoursite.com"></a>
+    <div title="播放/暂停" class="iconfont icon-play"></div>
+    <h3 class="subtitle">Ubuntu官方源换阿里源</h3>
+    <div class="social">
+        <div>
+            <div class="share">
+                <a title="获取二维码" class="iconfont icon-scan" href="javascript:;"></a>
+            </div>
+            <div id="qr"></div>
+        </div>
+    </div>
+    <div class="scrollbar"></div>
+</div>
+
+    <div class="section">
+        <div class="article">
+    <div class='main'>
+        <h1 class="title">Ubuntu官方源换阿里源</h1>
+        <div class="stuff">
+            <span>六月 21, 2020</span>
+            
+  <ul class="post-tags-list" itemprop="keywords"><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/Ubuntu/" rel="tag">Ubuntu</a></li></ul>
+
+
+        </div>
+        <div class="content markdown">
+            <blockquote>
+<p>由于国内访问 Ubuntu 官方源速度慢，故将本机替换为阿里源。</p>
+</blockquote>
+<ol>
+<li><p>首先了解下 Ubuntu 发行版的版本和代号。Ubuntu 发布版本的官方名称是 “Ubuntu X.YY”，其中 X 表示年份（减去2000），YY 表示发布的月份。比如：Ubuntu 18.04 也就意味着是 2018年4月发布的版本。另外，每个版本都有一个有特色的代号，它由一个形容词和一个动物名称组成。并且，形容词和名词的首字母都是一致的。</p>
+<table>
+<thead>
+<tr>
+<th><strong>版本</strong></th>
+<th><strong>别名（codename）</strong></th>
+<th><strong>发布日期</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>4.10</td>
+<td>Warty Warthog (长疣的疣猪)</td>
+<td>2004年10月20日</td>
+</tr>
+<tr>
+<td>5.04</td>
+<td>Hoary Hedgehog (灰白的刺猬)</td>
+<td>2005年4月8日</td>
+</tr>
+<tr>
+<td>5.10</td>
+<td>Breezy Badger (活泼的獾)</td>
+<td>2005年10月13日</td>
+</tr>
+<tr>
+<td>6.06</td>
+<td>Dapper Drake (整洁的公鸭)</td>
+<td>2006年6月1日 (LTS)</td>
+</tr>
+<tr>
+<td>6.10</td>
+<td>Edgy Eft (急躁的水蜥)</td>
+<td>2006年10月26日</td>
+</tr>
+<tr>
+<td>7.04</td>
+<td>Feisty Fawn (坏脾气的小鹿)</td>
+<td>2007年4月19日</td>
+</tr>
+<tr>
+<td>7.10</td>
+<td>Gutsy Gibbon (勇敢的长臂猿)</td>
+<td>2007年10月18日</td>
+</tr>
+<tr>
+<td>8.04</td>
+<td>Hardy Heron (耐寒的苍鹭)</td>
+<td>2008年4月24日 (LTS)</td>
+</tr>
+<tr>
+<td>8.10</td>
+<td>Intrepid Ibex (勇敢的野山羊)</td>
+<td>2008年10月30日</td>
+</tr>
+<tr>
+<td>9.04</td>
+<td>Jaunty Jackalope (得意洋洋的怀俄明野兔)</td>
+<td>2009年4月23日</td>
+</tr>
+<tr>
+<td>9.10</td>
+<td>Karmic Koala (幸运的考拉)</td>
+<td>2009年10月29日</td>
+</tr>
+<tr>
+<td>10.04</td>
+<td>Lucid Lynx (清醒的猞猁)</td>
+<td>2010年4月29日 (LTS)</td>
+</tr>
+<tr>
+<td>10.10</td>
+<td>Maverick Meerkat (标新立异的狐獴)</td>
+<td>2010年10月10日</td>
+</tr>
+<tr>
+<td>11.04</td>
+<td>Natty Narwhal (敏捷的独角鲸)</td>
+<td>2011年4月28日</td>
+</tr>
+<tr>
+<td>11.10</td>
+<td>Oneiric Ocelot (梦幻的豹猫)</td>
+<td>2011年10月13日</td>
+</tr>
+<tr>
+<td>12.04</td>
+<td>Precise Pangolin (精准的穿山甲)</td>
+<td>2012年的4月26日 (LTS)</td>
+</tr>
+<tr>
+<td>12.10</td>
+<td>Quantal Quetzal (量子的绿咬鹃)</td>
+<td>2012年的10月18日</td>
+</tr>
+<tr>
+<td>13.04</td>
+<td>Raring Ringtail (铆足了劲的猫熊)</td>
+<td>2013年4月25日</td>
+</tr>
+<tr>
+<td>13.10</td>
+<td>Saucy Salamander (活泼的蝾螈)</td>
+<td>2013年10月17日</td>
+</tr>
+<tr>
+<td>14.04</td>
+<td>Trusty Tahr (可靠的塔尔羊)</td>
+<td>2014年4月18日 (LTS)</td>
+</tr>
+<tr>
+<td>14.10</td>
+<td>Utopic Unicorn (乌托邦独角兽)</td>
+<td>2014年10月23日</td>
+</tr>
+<tr>
+<td>15.04</td>
+<td>Vivid Vervet (活泼的小猴)</td>
+<td>2015年4月22日</td>
+</tr>
+<tr>
+<td>15.10</td>
+<td>Wily Werewolf (狡猾的狼人)</td>
+<td>2015年10月23日</td>
+</tr>
+<tr>
+<td>16.04</td>
+<td>Xenial Xerus (好客的非洲地松鼠)</td>
+<td>2016年4月21日 (LTS)</td>
+</tr>
+<tr>
+<td>16.10</td>
+<td>Yakkety Yak (牦牛)</td>
+<td>2016年10月20日</td>
+</tr>
+<tr>
+<td>17.04</td>
+<td>Zesty Zapus (开心的跳鼠)</td>
+<td>2017年4月13日</td>
+</tr>
+<tr>
+<td>17.10</td>
+<td>Artful Aardvark (机灵的土豚)</td>
+<td>2017年10月21日</td>
+</tr>
+<tr>
+<td>18.04</td>
+<td>Bionic Beaver (仿生海狸)</td>
+<td>2018年4月26日 (LTS)</td>
+</tr>
+<tr>
+<td>18.10</td>
+<td>Cosmic Cuttlefish (宇宙墨鱼)</td>
+<td>2018年10月18日</td>
+</tr>
+<tr>
+<td>19.04</td>
+<td>Disco Dingo (舞动的灵犬)</td>
+<td>2019年4月19日</td>
+</tr>
+<tr>
+<td>19.10</td>
+<td>Eoan Ermine (白貂)</td>
+<td>2019年10月17日</td>
+</tr>
+<tr>
+<td>20.04</td>
+<td>Focal Fossa (专注的马达加斯加长尾狸猫)</td>
+<td>2020年4月23日 (LTS)</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>查看本机Ubuntu的版本和代号</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lsb_release -a</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">No LSB modules are available.</span><br><span class="line">Distributor ID:	Ubuntu</span><br><span class="line">Description:	Ubuntu 18.04.4 LTS</span><br><span class="line">Release:		18.04</span><br><span class="line">Codename:		bionic</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查看官方源和阿里源该版本是否存在</p>
+<p>官方：<a href="http://archive.ubuntu.com/ubuntu/dists/" target="_blank" rel="noopener">http://archive.ubuntu.com/ubuntu/dists/</a></p>
+<p><img src="../images/image-20200621161140513.png" alt="image-20200621161140513"></p>
+<p>阿里：<a href="http://mirrors.aliyun.com/ubuntu/dists/" target="_blank" rel="noopener">http://mirrors.aliyun.com/ubuntu/dists/</a></p>
+<p><img src="../images/image-20200621162416604.png" alt="image-20200621162416604"></p>
+<p><em>可以看到，已经有了ubuntu 18.04 (代号bionic) 的源。</em></p>
+</li>
+<li><p>备份系统中原来的官方源</p>
+<p><code>sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak</code></p>
+</li>
+<li><p>把下面模板中所有TODO替换为当前系统ubuntu版本的代号</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">deb http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;ubuntu&#x2F; TODO main restricted universe multiverse</span><br><span class="line">deb-src http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;ubuntu&#x2F; TODO main restricted universe multiverse</span><br><span class="line"></span><br><span class="line">deb http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;ubuntu&#x2F; TODO-security main restricted universe multiverse</span><br><span class="line">deb-src http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;ubuntu&#x2F; TODO-security main restricted universe multiverse</span><br><span class="line"></span><br><span class="line">deb http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;ubuntu&#x2F; TODO-updates main restricted universe multiverse</span><br><span class="line">deb-src http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;ubuntu&#x2F; TODO-updates main restricted universe multiverse</span><br><span class="line"></span><br><span class="line">deb http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;ubuntu&#x2F; TODO-proposed main restricted universe multiverse</span><br><span class="line">deb-src http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;ubuntu&#x2F; TODO-proposed main restricted universe multiverse</span><br><span class="line"></span><br><span class="line">deb http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;ubuntu&#x2F; TODO-backports main restricted universe multiverse</span><br><span class="line">deb-src http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;ubuntu&#x2F; TODO-backports main restricted universe multiverse</span><br></pre></td></tr></table></figure>
+
+<p>以Ubuntu 18.04 (代号bionic) 为例，得到阿里源：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">deb http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;ubuntu&#x2F; bionic main restricted universe multiverse</span><br><span class="line">deb-src http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;ubuntu&#x2F; bionic main restricted universe multiverse</span><br><span class="line"></span><br><span class="line">deb http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;ubuntu&#x2F; bionic-security main restricted universe multiverse</span><br><span class="line">deb-src http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;ubuntu&#x2F; bionic-security main restricted universe multiverse</span><br><span class="line"></span><br><span class="line">deb http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;ubuntu&#x2F; bionic-updates main restricted universe multiverse</span><br><span class="line">deb-src http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;ubuntu&#x2F; bionic-updates main restricted universe multiverse</span><br><span class="line"></span><br><span class="line">deb http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;ubuntu&#x2F; bionic-proposed main restricted universe multiverse</span><br><span class="line">deb-src http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;ubuntu&#x2F; bionic-proposed main restricted universe multiverse</span><br><span class="line"></span><br><span class="line">deb http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;ubuntu&#x2F; bionic-backports main restricted universe multiverse</span><br><span class="line">deb-src http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;ubuntu&#x2F; bionic-backports main restricted universe multiverse</span><br></pre></td></tr></table></figure>
+
+<p>然后粘贴到刚才的<code>/etc/apt/sources.list</code>里。</p>
+</li>
+<li><p>更新缓存和升级</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get upgrade</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+</li>
+</ol>
+
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
+                <source type="audio/mpeg" src="">
+            </audio>
+            
+                <ul id="audio-list" style="display:none">
+                    
+                        
+                            <li title='0' data-url='http://link.hhtjim.com/163/425570952.mp3'></li>
+                        
+                    
+                        
+                            <li title='1' data-url='http://link.hhtjim.com/163/425570952.mp3'></li>
+                        
+                    
+                        
+                            <li title='2' data-url='https://link.hhtjim.com/163/1336202172.mp3'></li>
+                        
+                    
+                        
+                            <li title='3' data-url='https://link.hhtjim.com/163/283846.mp3'></li>
+                        
+                    
+                        
+                            <li title='4' data-url='https://link.hhtjim.com/163/1341635889.mp3'></li>
+                        
+                    
+                </ul>
+            
+        </div>
+        
+    <div id='gitalk-container' class="comment link"
+		data-enable='false'
+        data-ae='false'
+        data-ci=''
+        data-cs=''
+        data-r=''
+        data-o=''
+        data-a=''
+        data-d='false'
+    >查看评论</div>
+
+
+    </div>
+    
+</div>
+
+
+    </div>
+</div>
+</body>
+
+
+<script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/typed.js"></script>
+<script src="/js/diaspora.js"></script>
+
+
+<link rel="stylesheet" href="/photoswipe/photoswipe.css">
+<link rel="stylesheet" href="/photoswipe/default-skin/default-skin.css">
+
+
+<script src="/photoswipe/photoswipe.min.js"></script>
+<script src="/photoswipe/photoswipe-ui-default.min.js"></script>
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+</html>
