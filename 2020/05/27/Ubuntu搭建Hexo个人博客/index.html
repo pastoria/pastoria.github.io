@@ -79,7 +79,7 @@ node-v12.17.0-linux-x64.tar.xz
 <p><code>sudo tar xJvf node-v12.17.0-linux-x64.tar.xz -C /usr/local/bin/</code></p>
 </li>
 <li><p>创建软链接</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /usr/<span class="built_in">local</span>/bin/</span><br><span class="line">sudo ln -s node-v12.17.0-linux-x64/bin/node ./node</span><br><span class="line">sudo ln -s node-v12.17.0-linux-x64/bin/npm ./npm</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /usr/<span class="built_in">local</span>/bin/</span><br><span class="line">sudo ln -s node-v12.17.0-linux-x64/bin/node node</span><br><span class="line">sudo ln -s node-v12.17.0-linux-x64/bin/npm npm</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>确保”/usr/local/bin/“在PATH路径中</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="variable">$PATH</span></span><br></pre></td></tr></table></figure>
@@ -90,6 +90,12 @@ node-v12.17.0-linux-x64.tar.xz
 </li>
 <li><p>安装Hexo</p>
 <p><code>sudo npm install hexo-cli -g</code></p>
+</li>
+<li><p>创建软链接</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /usr/<span class="built_in">local</span>/bin/</span><br><span class="line">sudo ln -s node-v12.17.0-linux-x64/bin/hexo hexo</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查看Hexo版本</p>
+<img src="/images/image-20200624002342640.png" style="margin-left: 0;">
 </li>
 <li><p>创建并初始化blog目录</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo init blog</span><br><span class="line"><span class="built_in">cd</span> blog</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
