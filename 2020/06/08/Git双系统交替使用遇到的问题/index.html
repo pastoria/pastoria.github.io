@@ -20,16 +20,17 @@
     var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Pisces","version":"8.0.0-rc.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":true,"show_result":true,"style":"default"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="在双系统环境下（如Linux，Windows）交替使用Git，可能会遇到一些问题。通过设置Git配置项可以解决。   Linux下文件换行符号是LF，而Windows下文件换行符号是CRLF。为了避免版本库中源文件两种换行符混杂的情况，可以在Windows中设置Git配置项core.autocrlf&#x3D;true。表示在检出版本库时，自动将LF转换成CRLF;在提交版本库时，自动将CRLF转换成L">
+  <meta name="description" content="在双系统环境下（如Linux，Windows）交替使用Git，可能会遇到一些问题。通过设置Git配置项可以解决。   Linux下文件换行符号是LF，而Windows下文件换行符号是CRLF。为了避免版本库中源文件两种换行符混杂的情况，可以在Windows中设置Git配置项core.autocrlf&#x3D;true。表示在检出版本库时，自动将LF转换成CRLF;在提交版本库时，自动将CRLF转换成LF">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Git双系统交替使用遇到的问题">
 <meta property="og:url" content="http://yoursite.com/2020/06/08/Git%E5%8F%8C%E7%B3%BB%E7%BB%9F%E4%BA%A4%E6%9B%BF%E4%BD%BF%E7%94%A8%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/index.html">
 <meta property="og:site_name" content="萝卜头の技术博客">
-<meta property="og:description" content="在双系统环境下（如Linux，Windows）交替使用Git，可能会遇到一些问题。通过设置Git配置项可以解决。   Linux下文件换行符号是LF，而Windows下文件换行符号是CRLF。为了避免版本库中源文件两种换行符混杂的情况，可以在Windows中设置Git配置项core.autocrlf&#x3D;true。表示在检出版本库时，自动将LF转换成CRLF;在提交版本库时，自动将CRLF转换成L">
+<meta property="og:description" content="在双系统环境下（如Linux，Windows）交替使用Git，可能会遇到一些问题。通过设置Git配置项可以解决。   Linux下文件换行符号是LF，而Windows下文件换行符号是CRLF。为了避免版本库中源文件两种换行符混杂的情况，可以在Windows中设置Git配置项core.autocrlf&#x3D;true。表示在检出版本库时，自动将LF转换成CRLF;在提交版本库时，自动将CRLF转换成LF">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-06-08T14:51:12.307Z">
-<meta property="article:modified_time" content="2020-06-07T10:20:08.435Z">
+<meta property="article:modified_time" content="2020-08-07T14:00:03.002Z">
 <meta property="article:author" content="萝卜">
+<meta property="article:tag" content="Git">
 <meta name="twitter:card" content="summary">
 
 <link rel="canonical" href="http://yoursite.com/2020/06/08/Git%E5%8F%8C%E7%B3%BB%E7%BB%9F%E4%BA%A4%E6%9B%BF%E4%BD%BF%E7%94%A8%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/">
@@ -124,7 +125,7 @@
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">3</span></a>
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">4</span></a>
 
   </li>
         <li class="menu-item menu-item-categories">
@@ -134,7 +135,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">13</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">14</span></a>
 
   </li>
   </ul>
@@ -194,7 +195,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-06-07 18:20:08" itemprop="dateModified" datetime="2020-06-07T18:20:08+08:00">2020-06-07</time>
+                <time title="修改时间：2020-08-07 22:00:03" itemprop="dateModified" datetime="2020-08-07T22:00:03+08:00">2020-08-07</time>
               </span>
 
           
@@ -230,7 +231,7 @@
 
       
         <blockquote>
-<p> 在双系统环境下（如Linux，Windows）交替使用Git，可能会遇到一些问题。通过设置Git配置项可以解决。</p>
+<p>在双系统环境下（如Linux，Windows）交替使用Git，可能会遇到一些问题。通过设置Git配置项可以解决。</p>
 </blockquote>
 <ol>
 <li><p>Linux下文件换行符号是LF，而Windows下文件换行符号是CRLF。为了避免版本库中源文件两种换行符混杂的情况，可以在Windows中设置Git配置项<code>core.autocrlf=true</code>。表示在检出版本库时，自动将LF转换成CRLF;在提交版本库时，自动将CRLF转换成LF。</p>
@@ -271,6 +272,9 @@
     </div>
 
       <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Git/" rel="tag"><i class="fa fa-tag"></i> Git</a>
+          </div>
 
         
 
@@ -358,7 +362,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">13</span>
+          <span class="site-state-item-count">14</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -371,7 +375,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-count">4</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
