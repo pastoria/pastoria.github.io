@@ -184,10 +184,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2020-08-07 21:56:10 / 修改时间：22:23:47" itemprop="dateCreated datePublished" datetime="2020-08-07T21:56:10+08:00">2020-08-07</time>
+              <time title="创建时间：2020-08-07 21:56:10" itemprop="dateCreated datePublished" datetime="2020-08-07T21:56:10+08:00">2020-08-07</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-01-14 00:00:20" itemprop="dateModified" datetime="2021-01-14T00:00:20+08:00">2021-01-14</time>
+              </span>
 
           <br>
             <span class="post-meta-item" title="本文字数">
@@ -195,7 +201,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>148</span>
+              <span>157</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -222,7 +228,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git checkout -b develop</span><br><span class="line">git push --set-upstream origin develop</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>远程仓库拉取新分支到本地</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout -b develop origin&#x2F;develop</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git fetch</span><br><span class="line">git checkout -b develop origin&#x2F;develop</span><br></pre></td></tr></table></figure>
 
 </li>
 </ul>
@@ -365,7 +371,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-07-11 16:44:38" itemprop="dateModified" datetime="2020-07-11T16:44:38+08:00">2020-07-11</time>
+                <time title="修改时间：2021-01-13 23:58:23" itemprop="dateModified" datetime="2021-01-13T23:58:23+08:00">2021-01-13</time>
               </span>
 
           <br>
@@ -374,7 +380,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>418</span>
+              <span>500</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -398,18 +404,31 @@
 </blockquote>
 <ul>
 <li><p>国内源</p>
-<p><code>清华大学 https://pypi.tuna.tsinghua.edu.cn/simple/</code></p>
-<p><code>中国科技大学 https://pypi.mirrors.ustc.edu.cn/simple/</code></p>
-<p><code>阿里云 https://mirrors.aliyun.com/pypi/simple/</code></p>
-<p><code>豆瓣 https://pypi.douban.com/simple/</code></p>
+<p><code>清华大学 https://pypi.tuna.tsinghua.edu.cn/simple</code></p>
+<p><code>中国科技大学 https://pypi.mirrors.ustc.edu.cn/simple</code></p>
+<p><code>阿里云 https://mirrors.aliyun.com/pypi/simple</code></p>
+<p><code>豆瓣 https://pypi.douban.com/simple</code></p>
+<blockquote>
+<p>注：优先使用豆瓣源</p>
+</blockquote>
 </li>
 <li><p>临时使用</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install -i https://pypi.tuna.tsinghua.edu.cn/simple PySide2</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install -i https:&#x2F;&#x2F;pypi.douban.com&#x2F;simple PySide2</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>永久使用</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">pyenv global 3.7.7</span><br><span class="line">pip config <span class="built_in">set</span> global.index-url https://pypi.tuna.tsinghua.edu.cn/simple</span><br><span class="line">pyenv shell venvqt</span><br><span class="line">pip install PyQt5</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">pyenv global 3.7.7</span><br><span class="line">pip config set global.index-url https:&#x2F;&#x2F;pypi.douban.com&#x2F;simple</span><br><span class="line">pyenv shell venvqt</span><br><span class="line">pip install PyQt5</span><br></pre></td></tr></table></figure>
 
 
+</li>
+</ul>
+<ul>
+<li><p>批量备份</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip freeze &gt; requirements.txt</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
+<li><p>批量安装</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install -r requirements.txt</span><br></pre></td></tr></table></figure>
 
 </li>
 </ul>
@@ -1472,7 +1491,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-05-30 22:21:28" itemprop="dateModified" datetime="2020-05-30T22:21:28+08:00">2020-05-30</time>
+                <time title="修改时间：2021-01-14 00:08:39" itemprop="dateModified" datetime="2021-01-14T00:08:39+08:00">2021-01-14</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -1490,7 +1509,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>225</span>
+              <span>229</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -1510,14 +1529,14 @@
 
       
           <ul>
-<li><p>解压tar.gz</p>
+<li><p>解压tar.gz或tgz</p>
 <p><code>sudo tar xzvf openvpn-2.4.8.tar.gz -C /usr/local/bin/</code></p>
-</li>
-<li><p>解压tar.xz</p>
-<p><code>sudo tar xJvf node-v12.17.0-linux-x64.tar.xz -C /usr/local/bin/</code></p>
 </li>
 <li><p>解压tar.bz2</p>
 <p><code>sudo tar xjvf openvpn-2.4.8.tar.bz2 -C /usr/local/bin/</code></p>
+</li>
+<li><p>解压tar.xz</p>
+<p><code>sudo tar xJvf node-v12.17.0-linux-x64.tar.xz -C /usr/local/bin/</code></p>
 </li>
 <li><p>解压zip</p>
 <p><code>unzip -d ~/Documents git-recipes-master.zip</code></p>
@@ -1779,7 +1798,7 @@
 <div class="copyright">
   
   &copy; 
-  <span itemprop="copyrightYear">2020</span>
+  <span itemprop="copyrightYear">2021</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
